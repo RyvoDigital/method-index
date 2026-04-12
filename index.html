@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Method Index — elite business consulting for founders and executives who build at scale. Engagements from $50k–$250k." />
+  <meta name="theme-color" content="#0D0D0D" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Method Index" />
+  <meta property="og:description" content="Built for Those Who Build." />
+  <meta property="og:type" content="website" />
+
+  <title>Method Index</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=DM+Sans:wght@300;400&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── Grain Texture Overlay ── -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav id="nav" class="load-hidden" role="navigation" aria-label="Primary navigation">
+    <a href="#hero" class="nav__wordmark" aria-label="Method Index — return to top">
+      <span class="wordmark-first">Method</span><span class="wordmark-last">Index</span>
+    </a>
+
+    <ul class="nav__links" role="list">
+      <li><a href="#services">What We Do</a></li>
+      <li><a href="#about">Our Story</a></li>
+      <li><a href="#contact">Connect</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main>
+
+    <!-- ── Hero ── -->
+    <section id="hero" aria-label="Hero">
+
+      <!-- Background texture image (parallax via JS) -->
+      <div class="hero__bg" aria-hidden="true">
+        <img src="assets/hero-bg.png" alt="" class="hero__bg-img" draggable="false">
+      </div>
+
+      <!-- Dark overlay -->
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__inner">
+
+        <!-- Typographic headline sculpture -->
+        <h1 class="hero__headline" aria-label="Method Index">
+          <span class="hero__word--method load-hidden">Method</span>
+          <span class="hero__word--index load-hidden">Index</span>
+        </h1>
+
+        <!-- Gold rule -->
+        <hr class="hero__rule load-hidden" aria-hidden="true" />
+
+        <!-- Tagline -->
+        <span class="hero__tagline load-hidden">Built for Those Who Build</span>
+
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero__scroll-indicator load-hidden" aria-hidden="true">
+        <span class="hero__scroll-label">Scroll</span>
+        <div class="hero__scroll-line">
+          <span class="hero__scroll-dot"></span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ── Mission ── -->
+    <section id="mission" aria-label="Mission">
+      <div class="mission-inner" data-reveal="up">
+        <div class="mission-rule"></div>
+        <blockquote class="mission-quote">
+          <p>Our mission<br><em>is your success.</em></p>
+        </blockquote>
+        <div class="mission-rule"></div>
+        <p class="mission-sub">We do not adhere to the belief that the unique needs of our clients can be satisfied with a pre-programmed approach.</p>
+      </div>
+    </section>
+
+    <!-- ── Services ── -->
+    <section id="services" aria-label="Services">
+
+      <div class="services-intro">
+
+        <!-- Left: headline -->
+        <div class="services-intro__left" data-reveal="up">
+          <span class="label-sm">What We Do</span>
+          <p class="services-tagline">Five disciplines.<br>One integrated approach.</p>
+        </div>
+
+        <!-- Right: ghost number + discipline index -->
+        <div class="services-intro__right">
+          <span class="services-intro__ghost" aria-hidden="true">5</span>
+          <ul class="services-intro__index" data-reveal-stagger aria-label="Our five disciplines">
+            <li class="services-intro__index-item">
+              <span class="services-intro__index-num">01</span>
+              <span class="services-intro__index-rule" aria-hidden="true"></span>
+              <span class="services-intro__index-name">Concept Development</span>
+            </li>
+            <li class="services-intro__index-item">
+              <span class="services-intro__index-num">02</span>
+              <span class="services-intro__index-rule" aria-hidden="true"></span>
+              <span class="services-intro__index-name">Identity Design</span>
+            </li>
+            <li class="services-intro__index-item">
+              <span class="services-intro__index-num">03</span>
+              <span class="services-intro__index-rule" aria-hidden="true"></span>
+              <span class="services-intro__index-name">Business Operations</span>
+            </li>
+            <li class="services-intro__index-item">
+              <span class="services-intro__index-num">04</span>
+              <span class="services-intro__index-rule" aria-hidden="true"></span>
+              <span class="services-intro__index-name">Brand Experience</span>
+            </li>
+            <li class="services-intro__index-item">
+              <span class="services-intro__index-num">05</span>
+              <span class="services-intro__index-rule" aria-hidden="true"></span>
+              <span class="services-intro__index-name">Marketing Strategy</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Tall scroll container — 500vh gives 100vh per service step -->
+      <div class="services-scroll-container">
+        <div class="services-sticky">
+
+          <!-- Left: service info panel -->
+          <div class="services-panel">
+            <div class="service-item active" data-service="1">
+              <span class="service-number">01</span>
+              <h3 class="service-title">Concept Development</h3>
+              <p class="service-desc">We identify your core market, define your offering, and build the strategic foundation every successful brand requires.</p>
+            </div>
+            <div class="service-item" data-service="2">
+              <span class="service-number">02</span>
+              <h3 class="service-title">Identity Design</h3>
+              <p class="service-desc">Brand language, visual systems, and consumer positioning crafted to command attention and hold it.</p>
+            </div>
+            <div class="service-item" data-service="3">
+              <span class="service-number">03</span>
+              <h3 class="service-title">Business Operations</h3>
+              <p class="service-desc">Management strategy, HR development, and operational architecture built to scale without compromise.</p>
+            </div>
+            <div class="service-item" data-service="4">
+              <span class="service-number">04</span>
+              <h3 class="service-title">Brand Experience</h3>
+              <p class="service-desc">Interior and exterior environments, social presence, and every touchpoint that defines how your brand is felt.</p>
+            </div>
+            <div class="service-item" data-service="5">
+              <span class="service-number">05</span>
+              <h3 class="service-title">Marketing Strategy</h3>
+              <p class="service-desc">Local market intelligence, lifestyle positioning, and social campaigns that reach the right people precisely.</p>
+            </div>
+          </div>
+
+          <!-- Right: bull rendered on canvas for pixel-precise section highlighting -->
+          <div class="bull-container">
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ── About ── -->
+    <section id="about" aria-label="About">
+      <div class="about-inner">
+        <div class="about-label" data-reveal="left">
+          <span class="label-sm">Our Story</span>
+          <div class="about-portrait">
+            <img src="https://www.methodindex.com/wp-content/uploads/2017/06/Rabih_Headshot_Edited.jpg" alt="Rabih Sater, Founder of Method Index" class="about-portrait-img" loading="lazy">
+            <div class="about-portrait-frame" aria-hidden="true"></div>
+          </div>
+          <span class="about-ghost" aria-hidden="true">R</span>
+        </div>
+        <div class="about-content" data-reveal="right">
+          <h2 class="about-heading">Rabih Sater<br><em>built this from nothing.</em></h2>
+          <div class="about-body">
+            <p>From the age of five, Rabih Sater learned business the way most people never do — by living inside one. Raised in a family of operators, he spent his childhood watching how environments shape customers, how operations shape teams, and how brands either command rooms or disappear into them.</p>
+            <p>By the time he founded Method Index, he had managed a collection of retail and real estate businesses with over 350 employees. Not as an observer. As the person responsible for everything.</p>
+          </div>
+          <blockquote class="about-quote">
+            <p>"I've always dreamt of developing businesses through environments and experience. Unfortunately, 90% of brands are missing one or the other."</p>
+            <cite>— Rabih Sater, Founder</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Marquee Strip ── -->
+    <div id="marquee-strip" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-text">Concept Development &nbsp;·&nbsp; Identity Design &nbsp;·&nbsp; Business Operations &nbsp;·&nbsp; Brand Experience &nbsp;·&nbsp; Marketing Strategy &nbsp;·&nbsp; Concept Development &nbsp;·&nbsp; Identity Design &nbsp;·&nbsp; Business Operations &nbsp;·&nbsp; Brand Experience &nbsp;·&nbsp; Marketing Strategy &nbsp;·&nbsp;</span>
+        <span class="marquee-text" aria-hidden="true">Concept Development &nbsp;·&nbsp; Identity Design &nbsp;·&nbsp; Business Operations &nbsp;·&nbsp; Brand Experience &nbsp;·&nbsp; Marketing Strategy &nbsp;·&nbsp; Concept Development &nbsp;·&nbsp; Identity Design &nbsp;·&nbsp; Business Operations &nbsp;·&nbsp; Brand Experience &nbsp;·&nbsp; Marketing Strategy &nbsp;·&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ── Process ── -->
+    <section id="process" aria-label="Process">
+      <div class="process-inner">
+        <div class="process-header" data-reveal="up">
+          <span class="label-sm">Engagement</span>
+          <h2 class="process-heading">A structured path<br><em>to transformation.</em></h2>
+        </div>
+        <div class="process-list" data-reveal-stagger>
+          <div class="process-item">
+            <span class="process-num">01</span>
+            <span class="process-name">Discovery &amp; Assessment</span>
+            <span class="process-detail">We immerse ourselves in your business before proposing a single solution.</span>
+          </div>
+          <div class="process-item">
+            <span class="process-num">02</span>
+            <span class="process-name">Strategy Architecture</span>
+            <span class="process-detail">A custom roadmap built around your market, your team, and your ambition.</span>
+          </div>
+          <div class="process-item">
+            <span class="process-num">03</span>
+            <span class="process-name">Integrated Execution</span>
+            <span class="process-detail">We work across all five disciplines simultaneously — no siloed thinking.</span>
+          </div>
+          <div class="process-item">
+            <span class="process-num">04</span>
+            <span class="process-name">Measurement &amp; Evolution</span>
+            <span class="process-detail">Every engagement is monitored, refined, and held to results that matter.</span>
+          </div>
+        </div>
+        <div class="process-pricing">
+          <p>Engagements from <em>$50,000</em> — structured to the specific needs of your business.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Contact ── -->
+    <section id="contact" aria-label="Contact">
+      <div class="contact-inner">
+        <div class="contact-header" data-reveal="left">
+          <span class="label-sm">Connect</span>
+          <h2 class="contact-heading">Begin your<br><em>engagement.</em></h2>
+          <p class="contact-sub">We work with a limited number of clients each year. If you are ready to build something extraordinary, we want to hear from you.</p>
+        </div>
+        <form class="contact-form" data-reveal="right" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Company or brand name" autocomplete="organization">
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about your vision</label>
+            <textarea id="message" name="message" rows="5" placeholder="Describe your business, your goals, and what you're looking to achieve." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">
+            <span>Send Enquiry</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer id="footer" role="contentinfo">
+
+    <p class="footer__copy">
+      &copy; 2026 Method Index, LLC. All Rights Reserved.
+    </p>
+
+    <nav class="footer__social" aria-label="Social media links">
+      <a
+        href="https://www.instagram.com/methodindex"
+        class="footer__social-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Method Index on Instagram"
+      >
+        <!-- Instagram SVG icon -->
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+          <circle cx="12" cy="12" r="4" />
+          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+        </svg>
+      </a>
+    </nav>
+
+  </footer>
+
+  <!-- ============================================================
+       NAV SCROLL BEHAVIOUR
+       Inline script — toggles nav--scrolled class.
+       NOT in main.js (reserved for later agents).
+       ============================================================ -->
+  <script>
+    (function () {
+      var nav = document.getElementById('nav');
+      var scrollThreshold = window.innerHeight * 0.85;
+      var ticking = false;
+
+      function updateNav() {
+        if (window.scrollY > scrollThreshold) {
+          nav.classList.add('nav--scrolled');
+        } else {
+          nav.classList.remove('nav--scrolled');
+        }
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          window.requestAnimationFrame(updateNav);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      // Run on load in case page is refreshed mid-scroll
+      updateNav();
+    }());
+  </script>
+
+  <!-- Lenis smooth scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+  <!-- GSAP core + ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <!-- Main JS (populated by later agents) -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
