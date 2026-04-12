@@ -35,10 +35,16 @@ canvas.setAttribute('aria-hidden', 'true');
 canvas.style.cssText = 'width: 100%; height: auto; display: block; opacity: 1; transition: opacity 0.8s ease;';
 const ctx = canvas.getContext('2d');
 
-// Internal dimensions with devicePixelRatio for retina sharpness
-const BASE_W = 1280;
-const BASE_H = 714;
-const dpr = window.devicePixelRatio || 1;
+// Detect mobile viewport for performance optimization
+const isMobile = window.innerWidth <= 768;
+
+// On mobile: cap DPR at 1 and halve canvas backing resolution.
+// CSS width:100% handles visual scaling — users can't distinguish
+// 640px vs 1280px internal resolution on a phone screen.
+const BASE_W = isMobile ? 640 : 1280;
+const BASE_H = isMobile ? 357 : 714;
+const dpr = isMobile ? 1 : (window.devicePixelRatio || 1);
+
 canvas.width  = BASE_W * dpr;
 canvas.height = BASE_H * dpr;
 ctx.scale(dpr, dpr);
@@ -156,8 +162,10 @@ function initBullAnimation() {
       drawFrame(0);
       setActiveService(0);
       initScrollTrigger();
-      // Phase 2: load remaining frames 15–450 in batches of 10, 80ms apart
-      loadFramesBatch(PHASE1_COUNT, FRAME_COUNT - 1, 10, 80);
+      // Phase 2: smaller batches on mobile to avoid saturating network
+      const batchSize = isMobile ? 6 : 10;
+      const batchDelay = isMobile ? 120 : 80;
+      loadFramesBatch(PHASE1_COUNT, FRAME_COUNT - 1, batchSize, batchDelay);
     }
   }
 
