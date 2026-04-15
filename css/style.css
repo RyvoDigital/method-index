@@ -13,9 +13,9 @@
   --color-bg-alt:     #111318;
   --color-cream:      #F5F0E8;
   --color-cream-dim:  rgba(245, 240, 232, 0.55);
-  --color-gold:       #C9A55A;
-  --color-gold-glow:  rgba(201, 165, 90, 0.25);
-  --color-gold-dim:   rgba(201, 165, 90, 0.4);
+  --color-gold:       #2EC4C4;
+  --color-gold-glow:  rgba(46, 196, 196, 0.25);
+  --color-gold-dim:   rgba(46, 196, 196, 0.4);
 
   /* Spacing */
   --space-xs:   0.5rem;
@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav__links a {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: var(--color-cream-dim);
@@ -290,7 +290,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero__tagline {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   text-transform: uppercase;
   letter-spacing: 0.25em;
   color: var(--color-cream-dim);
@@ -570,7 +570,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .services-intro__index-item:hover {
-  border-bottom-color: rgba(201, 165, 90, 0.2);
+  border-bottom-color: rgba(46, 196, 196, 0.2);
 }
 
 .services-intro__index-num {
@@ -595,7 +595,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .services-intro__index-item:hover .services-intro__index-rule {
-  background: rgba(201, 165, 90, 0.3);
+  background: rgba(46, 196, 196, 0.3);
 }
 
 .services-intro__index-name {
@@ -696,7 +696,7 @@ h1, h2, h3, h4, h5, h6 {
 .service-desc {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   color: var(--color-cream-dim);
   line-height: 1.75;
   max-width: 42ch;
@@ -719,13 +719,93 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
-/* ── Canvas bull (pixel-level section highlighting) ── */
+/* ── Canvas bull (legacy — no longer active) ── */
 .bull-canvas {
   width: 100%;
   height: auto;
   display: block;
-  transition: opacity 0.8s ease;
-  mix-blend-mode: screen;
+}
+
+/* ── Services Interactive Section ── */
+.services-interactive {
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.services-interactive__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--space-xl);
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Bull image — PNG has native transparency, no blend mode needed */
+.bull-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* SVG hotspot overlay — matches image dimensions exactly at every breakpoint */
+.bull-hotspots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: block;
+}
+
+/* Bull wrapper — height driven by the image so SVG always aligns */
+.bull-interactive {
+  position: relative;
+  width: 100%;
+  line-height: 0; /* removes inline gap below img that would shift SVG */
+}
+
+/* Hotspots: completely invisible — click detection only, no visible fill */
+.hotspot {
+  fill: transparent;
+  stroke: none;
+  outline: none;
+}
+
+.hotspot:focus {
+  outline: none;
+}
+
+.bull-hotspots:focus {
+  outline: none;
+}
+
+/* Zone circle badges — teal ring only, no fill */
+.zone-badge {
+  fill: transparent;
+  stroke: var(--color-gold);
+  stroke-width: 2;
+  transition: stroke 0.3s ease, stroke-width 0.3s ease;
+  pointer-events: none;
+}
+
+/* Active zone badge: bright teal ring */
+.zone-badge.active {
+  stroke: var(--color-gold);
+  stroke-width: 2.5;
+  filter: drop-shadow(0 0 6px var(--color-gold));
+}
+
+/* Mobile: stack bull above text */
+@media (max-width: 768px) {
+  .services-interactive {
+    padding: var(--space-lg) var(--space-md);
+  }
+  .services-interactive__inner {
+    grid-template-columns: 1fr;
+  }
+  .bull-interactive { order: 1; }
+  .services-panel { order: 2; min-height: 220px; margin-top: var(--space-md); }
 }
 
 /* ── Services Responsive ── */
@@ -812,7 +892,7 @@ h1, h2, h3, h4, h5, h6 {
 .mission-sub {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   max-width: 55ch;
   text-align: center;
   line-height: 1.8;
@@ -906,7 +986,7 @@ h1, h2, h3, h4, h5, h6 {
 .about-body p {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   color: var(--color-cream-dim);
   line-height: 1.85;
   max-width: 58ch;
@@ -966,8 +1046,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #marquee-strip {
   background: var(--color-bg-alt);
-  border-top: 1px solid rgba(201, 165, 90, 0.2);
-  border-bottom: 1px solid rgba(201, 165, 90, 0.2);
+  border-top: 1px solid rgba(46, 196, 196, 0.2);
+  border-bottom: 1px solid rgba(46, 196, 196, 0.2);
   padding: 1.25rem 0;
   overflow: hidden;
   min-height: 0;
@@ -1069,10 +1149,10 @@ h1, h2, h3, h4, h5, h6 {
 .process-item:hover {
   background: linear-gradient(
     90deg,
-    rgba(201, 165, 90, 0.05) 0%,
+    rgba(46, 196, 196, 0.05) 0%,
     transparent 55%
   );
-  border-bottom-color: rgba(201, 165, 90, 0.22);
+  border-bottom-color: rgba(46, 196, 196, 0.22);
 }
 
 .process-num {
@@ -1107,7 +1187,7 @@ h1, h2, h3, h4, h5, h6 {
 .process-detail {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   color: var(--color-cream-dim);
   line-height: 1.7;
   transition: color 0.5s var(--ease-luxury);
@@ -1223,7 +1303,7 @@ h1, h2, h3, h4, h5, h6 {
 .contact-sub {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   color: var(--color-cream-dim);
   max-width: 42ch;
   line-height: 1.8;
@@ -1476,6 +1556,209 @@ blockquote {
   .services-intro { padding: 1.5rem 1.25rem; margin-bottom: var(--space-lg); }
   .bull-container { max-width: 100%; }
   .services-sticky { padding: 0.75rem 1.25rem; gap: 0.75rem; }
+}
+
+/* ── Language Switcher ─────────────────────────────────────────────── */
+.lang-switcher {
+  position: relative;
+  margin-left: var(--space-md);
+  flex-shrink: 0;
+}
+
+/* Matches nav link style exactly */
+.lang-switcher__btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  color: var(--color-cream-dim);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0;
+  padding-bottom: 4px;
+  cursor: pointer;
+  position: relative;
+  transition: color var(--duration-fast) var(--ease-luxury);
+}
+
+.lang-switcher__btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--color-gold);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--duration-fast) var(--ease-luxury);
+}
+
+.lang-switcher__btn:hover,
+.lang-switcher.open .lang-switcher__btn {
+  color: var(--color-cream);
+}
+
+.lang-switcher__btn:hover::after,
+.lang-switcher.open .lang-switcher__btn::after {
+  transform: scaleX(1);
+}
+
+.lang-switcher__chevron {
+  opacity: 0.5;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  flex-shrink: 0;
+  margin-bottom: 1px;
+}
+
+.lang-switcher.open .lang-switcher__chevron {
+  transform: rotate(180deg);
+  opacity: 0.8;
+}
+
+.lang-switcher__dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  background: rgba(13, 13, 13, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  min-width: 140px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  z-index: 1001;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.lang-switcher.open .lang-switcher__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-option {
+  list-style: none;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: none;
+  color: var(--color-cream-dim);
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: color var(--duration-fast) ease;
+}
+
+.lang-option:hover {
+  color: var(--color-cream);
+}
+
+.lang-option.active {
+  color: var(--color-gold);
+}
+
+/* ── RTL (Arabic) overrides ────────────────────────────────────────── */
+html[dir="rtl"] .nav__wordmark {
+  direction: ltr; /* brand name stays LTR always */
+}
+
+html[dir="rtl"] .lang-switcher__dropdown {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .nav__links a::after {
+  transform-origin: right center;
+}
+
+html[dir="rtl"] .hero__inner,
+html[dir="rtl"] .mission-inner,
+html[dir="rtl"] .services-intro,
+html[dir="rtl"] .services-panel,
+html[dir="rtl"] .about-content,
+html[dir="rtl"] .process-inner,
+html[dir="rtl"] .contact-inner {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .services-interactive__inner {
+  direction: rtl;
+}
+
+html[dir="rtl"] .process-item {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .about-body p {
+  font-family: 'Cairo', var(--font-sans);
+}
+
+html[dir="rtl"] .mission-sub,
+html[dir="rtl"] .service-desc,
+html[dir="rtl"] .process-detail,
+html[dir="rtl"] .contact-sub,
+html[dir="rtl"] .about-body p {
+  font-family: 'Cairo', var(--font-sans);
+  line-height: 1.9;
+}
+
+html[dir="rtl"] .mission-quote,
+html[dir="rtl"] .service-title,
+html[dir="rtl"] .about-heading,
+html[dir="rtl"] .process-heading,
+html[dir="rtl"] .contact-heading,
+html[dir="rtl"] .services-tagline {
+  font-family: 'Cairo', var(--font-sans);
+}
+
+html[dir="rtl"] .hero__tagline {
+  font-family: 'Cairo', var(--font-sans);
+  letter-spacing: 0.05em;
+}
+
+html[dir="rtl"] .label-sm {
+  font-family: 'Cairo', var(--font-sans);
+  letter-spacing: 0.05em;
+}
+
+html[dir="rtl"] input,
+html[dir="rtl"] textarea,
+html[dir="rtl"] label {
+  font-family: 'Cairo', var(--font-sans);
+  text-align: right;
+  direction: rtl;
+}
+
+html[dir="rtl"] .footer__copy {
+  font-family: 'Cairo', var(--font-sans);
+  direction: rtl;
+}
+
+html[dir="rtl"] .marquee-text {
+  font-family: 'Cairo', var(--font-sans);
+}
+
+@media (max-width: 768px) {
+  .lang-switcher {
+    margin-left: var(--space-sm);
+  }
+  .lang-switcher__btn {
+    font-size: 0.72rem;
+  }
+  .lang-switcher__dropdown {
+    min-width: 120px;
+  }
 }
 
 /* ── 375px — smallest supported viewport ──────────────────────────── */

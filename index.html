@@ -42,6 +42,24 @@
       <li><a href="#about">Our Story</a></li>
       <li><a href="#contact">Connect</a></li>
     </ul>
+
+    <!-- Language Switcher -->
+    <div class="lang-switcher" id="lang-switcher">
+      <button class="lang-switcher__btn" aria-expanded="false" aria-haspopup="listbox" aria-label="Select language">
+        <span class="lang-switcher__current">EN</span>
+        <svg class="lang-switcher__chevron" width="8" height="5" viewBox="0 0 8 5" fill="none" aria-hidden="true">
+          <path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <ul class="lang-switcher__dropdown" role="listbox" aria-label="Languages">
+        <li role="option" class="lang-option active" data-lang="en">English</li>
+        <li role="option" class="lang-option" data-lang="es">Español</li>
+        <li role="option" class="lang-option" data-lang="fr">Français</li>
+        <li role="option" class="lang-option" data-lang="it">Italiano</li>
+        <li role="option" class="lang-option" data-lang="ar">عربي</li>
+      </ul>
+    </div>
+
   </nav>
 
   <!-- ============================================================
@@ -143,46 +161,82 @@
 
       </div>
 
-      <!-- Tall scroll container — 500vh gives 100vh per service step -->
-      <div class="services-scroll-container">
-        <div class="services-sticky">
+    </section>
 
-          <!-- Left: service info panel -->
-          <div class="services-panel">
-            <div class="service-item active" data-service="1">
-              <span class="service-number">01</span>
-              <h3 class="service-title">Concept Development</h3>
-              <p class="service-desc">We identify your core market, define your offering, and build the strategic foundation every successful brand requires.</p>
-            </div>
-            <div class="service-item" data-service="2">
-              <span class="service-number">02</span>
-              <h3 class="service-title">Identity Design</h3>
-              <p class="service-desc">Brand language, visual systems, and consumer positioning crafted to command attention and hold it.</p>
-            </div>
-            <div class="service-item" data-service="3">
-              <span class="service-number">03</span>
-              <h3 class="service-title">Business Operations</h3>
-              <p class="service-desc">Management strategy, HR development, and operational architecture built to scale without compromise.</p>
-            </div>
-            <div class="service-item" data-service="4">
-              <span class="service-number">04</span>
-              <h3 class="service-title">Brand Experience</h3>
-              <p class="service-desc">Interior and exterior environments, social presence, and every touchpoint that defines how your brand is felt.</p>
-            </div>
-            <div class="service-item" data-service="5">
-              <span class="service-number">05</span>
-              <h3 class="service-title">Marketing Strategy</h3>
-              <p class="service-desc">Local market intelligence, lifestyle positioning, and social campaigns that reach the right people precisely.</p>
-            </div>
+    <section id="services-interactive" class="services-interactive" data-reveal>
+      <div class="services-interactive__inner">
+
+        <!-- LEFT: service text panel -->
+        <div class="services-panel">
+          <div class="service-item active" data-service="1">
+            <span class="service-number">01</span>
+            <h3 class="service-title">Concept Development</h3>
+            <p class="service-desc">We identify your core market, define your offering, and build the strategic foundation every successful brand requires.</p>
           </div>
-
-          <!-- Right: bull rendered on canvas for pixel-precise section highlighting -->
-          <div class="bull-container">
+          <div class="service-item" data-service="2">
+            <span class="service-number">02</span>
+            <h3 class="service-title">Identity Design</h3>
+            <p class="service-desc">Brand language, visual systems, and consumer positioning crafted to command attention and hold it.</p>
           </div>
-
+          <div class="service-item" data-service="3">
+            <span class="service-number">03</span>
+            <h3 class="service-title">Business Operations</h3>
+            <p class="service-desc">Management strategy, HR development, and operational architecture built to scale without compromise.</p>
+          </div>
+          <div class="service-item" data-service="4">
+            <span class="service-number">04</span>
+            <h3 class="service-title">Brand Experience</h3>
+            <p class="service-desc">Interior and exterior environments, social presence, and every touchpoint that defines how your brand is felt.</p>
+          </div>
+          <div class="service-item" data-service="5">
+            <span class="service-number">05</span>
+            <h3 class="service-title">Marketing Strategy</h3>
+            <p class="service-desc">Local market intelligence, lifestyle positioning, and social campaigns that reach the right people precisely.</p>
+          </div>
         </div>
-      </div>
 
+        <!-- RIGHT: bull image + clickable SVG hotspots -->
+        <div class="bull-interactive">
+          <img
+            src="assets/bull.png"
+            alt="Method Index service zones"
+            class="bull-img"
+          >
+          <svg
+            class="bull-hotspots"
+            viewBox="0 0 1280 714"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Clickable service zones"
+          >
+            <!-- Zone 1: Head / Neck -->
+            <polygon class="hotspot" data-zone="1"
+              points="805,120 1170,58 1255,195 1228,392 1018,448 800,395 782,235"/>
+            <circle class="zone-badge" data-zone="1" cx="891" cy="229" r="20"/>
+
+            <!-- Zone 2: Chest / Front shoulder -->
+            <polygon class="hotspot" data-zone="2"
+              points="600,170 805,130 800,395 690,448 598,398 582,280"/>
+            <circle class="zone-badge" data-zone="2" cx="782" cy="291" r="20"/>
+
+            <!-- Zone 3: Upper back -->
+            <polygon class="hotspot" data-zone="3"
+              points="428,105 690,118 700,342 600,380 432,348 390,210"/>
+            <circle class="zone-badge" data-zone="3" cx="573" cy="258" r="20"/>
+
+            <!-- Zone 4: Belly / Lower centre -->
+            <polygon class="hotspot" data-zone="4"
+              points="348,345 948,338 965,565 680,625 370,598 332,468"/>
+            <circle class="zone-badge" data-zone="4" cx="584" cy="395" r="20"/>
+
+            <!-- Zone 5: Rump / Rear -->
+            <polygon class="hotspot" data-zone="5"
+              points="55,180 432,155 435,540 278,625 58,585 40,385"/>
+            <circle class="zone-badge" data-zone="5" cx="359" cy="293" r="20"/>
+          </svg>
+        </div>
+
+      </div>
     </section>
 
     <!-- ── About ── -->
@@ -299,22 +353,6 @@
       &copy; 2026 Method Index, LLC. All Rights Reserved.
     </p>
 
-    <nav class="footer__social" aria-label="Social media links">
-      <a
-        href="https://www.instagram.com/methodindex"
-        class="footer__social-link"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Method Index on Instagram"
-      >
-        <!-- Instagram SVG icon -->
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-          <circle cx="12" cy="12" r="4" />
-          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
-        </svg>
-      </a>
-    </nav>
 
   </footer>
 
