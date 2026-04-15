@@ -96,6 +96,35 @@ if (document.readyState === 'loading') {
   runLoadSequence();
 }
 
+// ── SERVICES SHOWCASE ───────────────────────────────────────────
+function initServicesShowcase() {
+  var rows    = document.querySelectorAll('.showcase-row');
+  var figures = document.querySelectorAll('.showcase__figure');
+  if (!rows.length) return;
+
+  function activateShowcase(index) {
+    rows.forEach(function (r, i) {
+      r.classList.toggle('active', i === index);
+    });
+    figures.forEach(function (f, i) {
+      f.classList.toggle('active', i === index);
+    });
+  }
+
+  rows.forEach(function (row, i) {
+    row.addEventListener('mouseenter', function () { activateShowcase(i); });
+    row.addEventListener('click',      function () { activateShowcase(i); });
+  });
+
+  activateShowcase(0); // row 01 active by default
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initServicesShowcase);
+} else {
+  initServicesShowcase();
+}
+
 // ── SCROLL REVEALS ───────────────────────────────────────────────
 function initScrollReveals() {
   var revealEls = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
@@ -464,6 +493,14 @@ function applyTranslation(lang) {
     if (t.services.names[i]) el.textContent = t.services.names[i];
   });
   document.querySelectorAll('.service-desc').forEach(function (el, i) {
+    if (t.services.descs[i]) el.textContent = t.services.descs[i];
+  });
+
+  // Showcase rows
+  document.querySelectorAll('.showcase-row__name').forEach(function (el, i) {
+    if (t.services.names[i]) el.textContent = t.services.names[i];
+  });
+  document.querySelectorAll('.showcase-row__desc').forEach(function (el, i) {
     if (t.services.descs[i]) el.textContent = t.services.descs[i];
   });
 
