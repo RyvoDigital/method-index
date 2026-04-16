@@ -33,13 +33,13 @@
        NAVIGATION
        ============================================================ -->
   <nav id="nav" class="load-hidden" role="navigation" aria-label="Primary navigation">
-    <a href="#hero" class="nav__wordmark" aria-label="Method Index — return to top">
-      <span class="wordmark-first">Method</span><span class="wordmark-last">Index</span>
+    <a href="#hero" class="nav__logo" aria-label="Method Index — return to top">
+      <img src="assets/logo-symbol.svg" alt="Method Index" class="nav__logo-img">
     </a>
 
     <ul class="nav__links" role="list">
-      <li><a href="#services">What We Do</a></li>
-      <li><a href="#about">Our Story</a></li>
+      <li><a href="#services-showcase">What</a></li>
+      <li><a href="#about">Who</a></li>
       <li><a href="#contact">Connect</a></li>
     </ul>
 
@@ -80,17 +80,13 @@
 
       <div class="hero__inner">
 
-        <!-- Typographic headline sculpture -->
-        <h1 class="hero__headline" aria-label="Method Index">
-          <span class="hero__word--method load-hidden">Method</span>
-          <span class="hero__word--index load-hidden">Index</span>
-        </h1>
-
-        <!-- Gold rule -->
-        <hr class="hero__rule load-hidden" aria-hidden="true" />
-
-        <!-- Tagline -->
-        <span class="hero__tagline load-hidden">Built for Those Who Build</span>
+        <!-- Mission statement -->
+        <div class="hero__statement load-hidden">
+          <blockquote class="mission-quote">
+            <p>Our mission<br><em>is your success.</em></p>
+          </blockquote>
+          <p class="mission-sub">We do not adhere to the belief that the unique needs of our clients can be satisfied with a pre-programmed approach.</p>
+        </div>
 
       </div>
 
@@ -104,63 +100,87 @@
 
     </section>
 
-    <!-- ── Mission ── -->
-    <section id="mission" aria-label="Mission">
-      <div class="mission-inner" data-reveal="up">
-        <div class="mission-rule"></div>
-        <blockquote class="mission-quote">
-          <p>Our mission<br><em>is your success.</em></p>
-        </blockquote>
-        <div class="mission-rule"></div>
-        <p class="mission-sub">We do not adhere to the belief that the unique needs of our clients can be satisfied with a pre-programmed approach.</p>
-      </div>
-    </section>
+    <!-- ── Services Showcase ── -->
+    <section id="services-showcase" class="services-showcase" data-reveal>
+      <span class="label-sm showcase__section-label">What</span>
+      <div class="showcase__inner">
 
-    <!-- ── Services ── -->
-    <section id="services" aria-label="Services">
-
-      <div class="services-intro">
-
-        <!-- Left: headline -->
-        <div class="services-intro__left" data-reveal="up">
-          <span class="label-sm">What We Do</span>
-          <p class="services-tagline">Five disciplines.<br>One integrated approach.</p>
+        <!-- LEFT: service rows -->
+        <div class="showcase__list">
+          <div class="showcase-row active" data-showcase="1">
+            <span class="showcase-row__num">01</span>
+            <div class="showcase-row__body">
+              <h3 class="showcase-row__name">Concept Development</h3>
+              <p class="showcase-row__desc">We identify your core market, define your offering, and build the strategic foundation every successful brand requires.</p>
+            </div>
+            <span class="showcase-row__arrow" aria-hidden="true">↗</span>
+          </div>
+          <div class="showcase-row" data-showcase="2">
+            <span class="showcase-row__num">02</span>
+            <div class="showcase-row__body">
+              <h3 class="showcase-row__name">Identity Design</h3>
+              <p class="showcase-row__desc">Brand language, visual systems, and consumer positioning crafted to command attention and hold it.</p>
+            </div>
+            <span class="showcase-row__arrow" aria-hidden="true">↗</span>
+          </div>
+          <div class="showcase-row" data-showcase="3">
+            <span class="showcase-row__num">03</span>
+            <div class="showcase-row__body">
+              <h3 class="showcase-row__name">Business Operations</h3>
+              <p class="showcase-row__desc">Management strategy, HR development, and operational architecture built to scale without compromise.</p>
+            </div>
+            <span class="showcase-row__arrow" aria-hidden="true">↗</span>
+          </div>
+          <div class="showcase-row" data-showcase="4">
+            <span class="showcase-row__num">04</span>
+            <div class="showcase-row__body">
+              <h3 class="showcase-row__name">Brand Experience</h3>
+              <p class="showcase-row__desc">Interior and exterior environments, social presence, and every touchpoint that defines how your brand is felt.</p>
+            </div>
+            <span class="showcase-row__arrow" aria-hidden="true">↗</span>
+          </div>
+          <div class="showcase-row" data-showcase="5">
+            <span class="showcase-row__num">05</span>
+            <div class="showcase-row__body">
+              <h3 class="showcase-row__name">Marketing Strategy</h3>
+              <p class="showcase-row__desc">Local market intelligence, lifestyle positioning, and social campaigns that reach the right people precisely.</p>
+            </div>
+            <span class="showcase-row__arrow" aria-hidden="true">↗</span>
+          </div>
         </div>
 
-        <!-- Right: ghost number + discipline index -->
-        <div class="services-intro__right">
-          <span class="services-intro__ghost" aria-hidden="true">5</span>
-          <ul class="services-intro__index" data-reveal-stagger aria-label="Our five disciplines">
-            <li class="services-intro__index-item">
-              <span class="services-intro__index-num">01</span>
-              <span class="services-intro__index-rule" aria-hidden="true"></span>
-              <span class="services-intro__index-name">Concept Development</span>
-            </li>
-            <li class="services-intro__index-item">
-              <span class="services-intro__index-num">02</span>
-              <span class="services-intro__index-rule" aria-hidden="true"></span>
-              <span class="services-intro__index-name">Identity Design</span>
-            </li>
-            <li class="services-intro__index-item">
-              <span class="services-intro__index-num">03</span>
-              <span class="services-intro__index-rule" aria-hidden="true"></span>
-              <span class="services-intro__index-name">Business Operations</span>
-            </li>
-            <li class="services-intro__index-item">
-              <span class="services-intro__index-num">04</span>
-              <span class="services-intro__index-rule" aria-hidden="true"></span>
-              <span class="services-intro__index-name">Brand Experience</span>
-            </li>
-            <li class="services-intro__index-item">
-              <span class="services-intro__index-num">05</span>
-              <span class="services-intro__index-rule" aria-hidden="true"></span>
-              <span class="services-intro__index-name">Marketing Strategy</span>
-            </li>
-          </ul>
+        <!-- RIGHT: sticky image stack -->
+        <div class="showcase__media">
+          <div class="showcase__image-stack">
+            <figure class="showcase__figure active" data-showcase-img="1">
+              <img src="assets/what-01.png" alt="Concept Development" loading="lazy">
+              <span class="showcase__corner showcase__corner--tl"></span>
+              <span class="showcase__corner showcase__corner--br"></span>
+            </figure>
+            <figure class="showcase__figure" data-showcase-img="2">
+              <img src="assets/what-02.png" alt="Identity Design" loading="lazy">
+              <span class="showcase__corner showcase__corner--tl"></span>
+              <span class="showcase__corner showcase__corner--br"></span>
+            </figure>
+            <figure class="showcase__figure" data-showcase-img="3">
+              <img src="assets/what-03.png" alt="Business Operations" loading="lazy">
+              <span class="showcase__corner showcase__corner--tl"></span>
+              <span class="showcase__corner showcase__corner--br"></span>
+            </figure>
+            <figure class="showcase__figure" data-showcase-img="4">
+              <img src="assets/what-04.png" alt="Brand Experience" loading="lazy">
+              <span class="showcase__corner showcase__corner--tl"></span>
+              <span class="showcase__corner showcase__corner--br"></span>
+            </figure>
+            <figure class="showcase__figure" data-showcase-img="5">
+              <img src="assets/what-05.png" alt="Marketing Strategy" loading="lazy">
+              <span class="showcase__corner showcase__corner--tl"></span>
+              <span class="showcase__corner showcase__corner--br"></span>
+            </figure>
+          </div>
         </div>
 
       </div>
-
     </section>
 
     <section id="services-interactive" class="services-interactive" data-reveal>
@@ -212,110 +232,28 @@
             <!-- Zone 1: Head / Neck -->
             <polygon class="hotspot" data-zone="1"
               points="805,120 1170,58 1255,195 1228,392 1018,448 800,395 782,235"/>
-            <circle class="zone-badge" data-zone="1" cx="891" cy="229" r="20"/>
+            <circle class="zone-hover" data-zone="1" cx="891" cy="229" r="20"/>
 
             <!-- Zone 2: Chest / Front shoulder -->
             <polygon class="hotspot" data-zone="2"
               points="600,170 805,130 800,395 690,448 598,398 582,280"/>
-            <circle class="zone-badge" data-zone="2" cx="782" cy="291" r="20"/>
+            <circle class="zone-hover" data-zone="2" cx="782" cy="291" r="20"/>
 
             <!-- Zone 3: Upper back -->
             <polygon class="hotspot" data-zone="3"
               points="428,105 690,118 700,342 600,380 432,348 390,210"/>
-            <circle class="zone-badge" data-zone="3" cx="573" cy="258" r="20"/>
+            <circle class="zone-hover" data-zone="3" cx="573" cy="258" r="20"/>
 
             <!-- Zone 4: Belly / Lower centre -->
             <polygon class="hotspot" data-zone="4"
               points="348,345 948,338 965,565 680,625 370,598 332,468"/>
-            <circle class="zone-badge" data-zone="4" cx="584" cy="395" r="20"/>
+            <circle class="zone-hover" data-zone="4" cx="584" cy="395" r="20"/>
 
             <!-- Zone 5: Rump / Rear -->
             <polygon class="hotspot" data-zone="5"
               points="55,180 432,155 435,540 278,625 58,585 40,385"/>
-            <circle class="zone-badge" data-zone="5" cx="359" cy="293" r="20"/>
+            <circle class="zone-hover" data-zone="5" cx="359" cy="293" r="20"/>
           </svg>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ── Services Showcase ── -->
-    <section id="services-showcase" class="services-showcase" data-reveal>
-      <div class="showcase__inner">
-
-        <!-- LEFT: service rows -->
-        <div class="showcase__list">
-          <div class="showcase-row active" data-showcase="1">
-            <span class="showcase-row__num">01</span>
-            <div class="showcase-row__body">
-              <h3 class="showcase-row__name">Concept Development</h3>
-              <p class="showcase-row__desc">We identify your core market, define your offering, and build the strategic foundation every successful brand requires.</p>
-            </div>
-            <span class="showcase-row__arrow" aria-hidden="true">↗</span>
-          </div>
-          <div class="showcase-row" data-showcase="2">
-            <span class="showcase-row__num">02</span>
-            <div class="showcase-row__body">
-              <h3 class="showcase-row__name">Identity Design</h3>
-              <p class="showcase-row__desc">Brand language, visual systems, and consumer positioning crafted to command attention and hold it.</p>
-            </div>
-            <span class="showcase-row__arrow" aria-hidden="true">↗</span>
-          </div>
-          <div class="showcase-row" data-showcase="3">
-            <span class="showcase-row__num">03</span>
-            <div class="showcase-row__body">
-              <h3 class="showcase-row__name">Business Operations</h3>
-              <p class="showcase-row__desc">Management strategy, HR development, and operational architecture built to scale without compromise.</p>
-            </div>
-            <span class="showcase-row__arrow" aria-hidden="true">↗</span>
-          </div>
-          <div class="showcase-row" data-showcase="4">
-            <span class="showcase-row__num">04</span>
-            <div class="showcase-row__body">
-              <h3 class="showcase-row__name">Brand Experience</h3>
-              <p class="showcase-row__desc">Interior and exterior environments, social presence, and every touchpoint that defines how your brand is felt.</p>
-            </div>
-            <span class="showcase-row__arrow" aria-hidden="true">↗</span>
-          </div>
-          <div class="showcase-row" data-showcase="5">
-            <span class="showcase-row__num">05</span>
-            <div class="showcase-row__body">
-              <h3 class="showcase-row__name">Marketing Strategy</h3>
-              <p class="showcase-row__desc">Local market intelligence, lifestyle positioning, and social campaigns that reach the right people precisely.</p>
-            </div>
-            <span class="showcase-row__arrow" aria-hidden="true">↗</span>
-          </div>
-        </div>
-
-        <!-- RIGHT: sticky image stack -->
-        <div class="showcase__media">
-          <div class="showcase__image-stack">
-            <figure class="showcase__figure active" data-showcase-img="1">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Concept Development" loading="lazy">
-              <span class="showcase__corner showcase__corner--tl"></span>
-              <span class="showcase__corner showcase__corner--br"></span>
-            </figure>
-            <figure class="showcase__figure" data-showcase-img="2">
-              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Identity Design" loading="lazy">
-              <span class="showcase__corner showcase__corner--tl"></span>
-              <span class="showcase__corner showcase__corner--br"></span>
-            </figure>
-            <figure class="showcase__figure" data-showcase-img="3">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" alt="Business Operations" loading="lazy">
-              <span class="showcase__corner showcase__corner--tl"></span>
-              <span class="showcase__corner showcase__corner--br"></span>
-            </figure>
-            <figure class="showcase__figure" data-showcase-img="4">
-              <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Brand Experience" loading="lazy">
-              <span class="showcase__corner showcase__corner--tl"></span>
-              <span class="showcase__corner showcase__corner--br"></span>
-            </figure>
-            <figure class="showcase__figure" data-showcase-img="5">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Marketing Strategy" loading="lazy">
-              <span class="showcase__corner showcase__corner--tl"></span>
-              <span class="showcase__corner showcase__corner--br"></span>
-            </figure>
-          </div>
         </div>
 
       </div>
@@ -327,7 +265,7 @@
         <div class="about-label" data-reveal="left">
           <span class="label-sm">Our Story</span>
           <div class="about-portrait">
-            <img src="https://www.methodindex.com/wp-content/uploads/2017/06/Rabih_Headshot_Edited.jpg" alt="Rabih Sater, Founder of Method Index" class="about-portrait-img" loading="lazy">
+            <img src="assets/rabih-sater.png" alt="Rabih Sater, Founder of Method Index" class="about-portrait-img" loading="lazy">
             <div class="about-portrait-frame" aria-hidden="true"></div>
           </div>
           <span class="about-ghost" aria-hidden="true">R</span>
@@ -366,25 +304,26 @@
             <span class="process-num">01</span>
             <span class="process-name">Discovery &amp; Assessment</span>
             <span class="process-detail">We immerse ourselves in your business before proposing a single solution.</span>
+            <p class="process-expand">In-depth interviews, operational audits, and competitive analysis map your business from every angle — before a single recommendation is made.</p>
           </div>
           <div class="process-item">
             <span class="process-num">02</span>
             <span class="process-name">Strategy Architecture</span>
             <span class="process-detail">A custom roadmap built around your market, your team, and your ambition.</span>
+            <p class="process-expand">A bespoke strategic framework that unifies your brand identity, operational model, and market positioning into one coherent direction.</p>
           </div>
           <div class="process-item">
             <span class="process-num">03</span>
             <span class="process-name">Integrated Execution</span>
             <span class="process-detail">We work across all five disciplines simultaneously — no siloed thinking.</span>
+            <p class="process-expand">All relevant disciplines activate in parallel — identity, operations, experience, and marketing — so every element reinforces the others from day one.</p>
           </div>
           <div class="process-item">
             <span class="process-num">04</span>
             <span class="process-name">Measurement &amp; Evolution</span>
             <span class="process-detail">Every engagement is monitored, refined, and held to results that matter.</span>
+            <p class="process-expand">Clear performance indicators are established from day one, with structured review sessions and continuous refinement to ensure every investment delivers lasting results.</p>
           </div>
-        </div>
-        <div class="process-pricing">
-          <p>Engagements from <em>$50,000</em> — structured to the specific needs of your business.</p>
         </div>
       </div>
     </section>
@@ -400,12 +339,22 @@
         <form class="contact-form" data-reveal="right" novalidate>
           <div class="form-row">
             <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name" required>
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first_name" placeholder="First name" autocomplete="given-name" required>
             </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last_name" placeholder="Last name" autocomplete="family-name" required>
+            </div>
+          </div>
+          <div class="form-row">
             <div class="form-group">
               <label for="email">Email</label>
               <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 000 000 0000" autocomplete="tel" required>
             </div>
           </div>
           <div class="form-group">
@@ -413,8 +362,12 @@
             <input type="text" id="company" name="company" placeholder="Company or brand name" autocomplete="organization">
           </div>
           <div class="form-group">
-            <label for="message">Tell us about your vision</label>
-            <textarea id="message" name="message" rows="5" placeholder="Describe your business, your goals, and what you're looking to achieve." required></textarea>
+            <label for="about-yourself">Tell us about yourself</label>
+            <textarea id="about-yourself" name="about_yourself" rows="4" placeholder="Your background, experience, and what drives you." required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="about-business">Tell us about your business or product</label>
+            <textarea id="about-business" name="about_business" rows="4" placeholder="Describe your business, your goals, and what you're looking to achieve." required></textarea>
           </div>
           <button type="submit" class="btn-submit">
             <span>Send Enquiry</span>

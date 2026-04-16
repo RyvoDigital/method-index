@@ -16,27 +16,48 @@
 
 // ── SERVICE HOTSPOTS ────────────────────────────────────────────
 function initServiceHotspots() {
-  var hotspots = document.querySelectorAll('.hotspot');
-  var badges   = document.querySelectorAll('.zone-badge');
-  var items    = document.querySelectorAll('.service-item');
+  var hotspots    = document.querySelectorAll('.hotspot');
+  var hoverCircles = document.querySelectorAll('.zone-hover');
+  var items       = document.querySelectorAll('.service-item');
   if (!hotspots.length) return;
 
-  function activateZone(zone) {
-    hotspots.forEach(function (h) {
-      h.classList.toggle('active', h.dataset.zone === zone);
-    });
-    badges.forEach(function (b) {
-      b.classList.toggle('active', b.dataset.zone === zone);
-    });
+  var lockedZone = '1'; // zone locked by last click — panel reverts here on mouseleave
+
+  function showPanel(zone) {
     items.forEach(function (item) {
       item.classList.toggle('active', item.dataset.service === zone);
     });
   }
 
+  function showHoverCircle(zone) {
+    hoverCircles.forEach(function (c) {
+      c.classList.toggle('hovered', c.dataset.zone === zone);
+    });
+  }
+
+  function hideHoverCircles() {
+    hoverCircles.forEach(function (c) { c.classList.remove('hovered'); });
+  }
+
   hotspots.forEach(function (h) {
-    h.addEventListener('click', function () { activateZone(h.dataset.zone); });
+    h.addEventListener('mouseenter', function () {
+      showHoverCircle(h.dataset.zone);
+      showPanel(h.dataset.zone);
+    });
+    h.addEventListener('mouseleave', function () {
+      hideHoverCircles();
+      showPanel(lockedZone); // revert to last clicked zone
+    });
+    h.addEventListener('click', function () {
+      lockedZone = h.dataset.zone;
+      showPanel(lockedZone);
+    });
     h.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activateZone(h.dataset.zone); }
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        lockedZone = h.dataset.zone;
+        showPanel(lockedZone);
+      }
     });
     h.setAttribute('role', 'button');
     h.setAttribute('tabindex', '0');
@@ -44,13 +65,38 @@ function initServiceHotspots() {
   });
 
   // Default: zone 1 active on load
-  activateZone('1');
+  showPanel('1');
 }
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initServiceHotspots);
 } else {
   initServiceHotspots();
+}
+
+// ── SERVICES SHOWCASE ───────────────────────────────────────────
+function initServicesShowcase() {
+  var rows    = document.querySelectorAll('.showcase-row');
+  var figures = document.querySelectorAll('.showcase__figure');
+  if (!rows.length) return;
+
+  function activateShowcase(index) {
+    rows.forEach(function (r, i) { r.classList.toggle('active', i === index); });
+    figures.forEach(function (f, i) { f.classList.toggle('active', i === index); });
+  }
+
+  rows.forEach(function (row, i) {
+    row.addEventListener('mouseenter', function () { activateShowcase(i); });
+    row.addEventListener('click',      function () { activateShowcase(i); });
+  });
+
+  activateShowcase(0);
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initServicesShowcase);
+} else {
+  initServicesShowcase();
 }
 
 // ── NAV SCROLL PROGRESS ─────────────────────────────────────────
@@ -96,34 +142,6 @@ if (document.readyState === 'loading') {
   runLoadSequence();
 }
 
-// ── SERVICES SHOWCASE ───────────────────────────────────────────
-function initServicesShowcase() {
-  var rows    = document.querySelectorAll('.showcase-row');
-  var figures = document.querySelectorAll('.showcase__figure');
-  if (!rows.length) return;
-
-  function activateShowcase(index) {
-    rows.forEach(function (r, i) {
-      r.classList.toggle('active', i === index);
-    });
-    figures.forEach(function (f, i) {
-      f.classList.toggle('active', i === index);
-    });
-  }
-
-  rows.forEach(function (row, i) {
-    row.addEventListener('mouseenter', function () { activateShowcase(i); });
-    row.addEventListener('click',      function () { activateShowcase(i); });
-  });
-
-  activateShowcase(0); // row 01 active by default
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initServicesShowcase);
-} else {
-  initServicesShowcase();
-}
 
 // ── SCROLL REVEALS ───────────────────────────────────────────────
 function initScrollReveals() {
@@ -167,7 +185,7 @@ if (contactForm) {
 // ── LANGUAGE SWITCHER ───────────────────────────────────────────
 var TRANSLATIONS = {
   en: {
-    nav: { whatWeDo: 'What We Do', ourStory: 'Our Story', connect: 'Connect' },
+    nav: { whatWeDo: 'What', ourStory: 'Who', connect: 'Connect' },
     hero: { tagline: 'Built for Those Who Build' },
     mission: {
       quote: 'Our mission<br><em>is your success.</em>',
@@ -223,7 +241,7 @@ var TRANSLATIONS = {
   },
 
   es: {
-    nav: { whatWeDo: 'Qu\u00e9 Hacemos', ourStory: 'Nuestra Historia', connect: 'Contacto' },
+    nav: { whatWeDo: 'Qué', ourStory: 'Quién', connect: 'Contacto' },
     hero: { tagline: 'Construido para Quienes Construyen' },
     mission: {
       quote: 'Nuestra misi\u00f3n<br><em>es tu \u00e9xito.</em>',
@@ -279,7 +297,7 @@ var TRANSLATIONS = {
   },
 
   fr: {
-    nav: { whatWeDo: 'Nos Services', ourStory: 'Notre Histoire', connect: 'Contact' },
+    nav: { whatWeDo: 'Quoi', ourStory: 'Qui', connect: 'Contact' },
     hero: { tagline: 'Con\u00e7u pour Ceux Qui Construisent' },
     mission: {
       quote: 'Notre mission,<br><em>c\u2019est votre succ\u00e8s.</em>',
@@ -335,7 +353,7 @@ var TRANSLATIONS = {
   },
 
   it: {
-    nav: { whatWeDo: 'Cosa Facciamo', ourStory: 'La Nostra Storia', connect: 'Contatti' },
+    nav: { whatWeDo: 'Cosa', ourStory: 'Chi', connect: 'Contatti' },
     hero: { tagline: 'Fatto per Chi Costruisce' },
     mission: {
       quote: 'La nostra missione<br><em>\u00e8 il tuo successo.</em>',
@@ -391,7 +409,7 @@ var TRANSLATIONS = {
   },
 
   ar: {
-    nav: { whatWeDo: '\u0645\u0627 \u0646\u0642\u062f\u0651\u0645\u0647', ourStory: '\u0642\u0635\u0651\u062a\u0646\u0627', connect: '\u062a\u0648\u0627\u0635\u0644' },
+    nav: { whatWeDo: 'ماذا', ourStory: 'من', connect: 'تواصل' },
     hero: { tagline: '\u0635\u064f\u0646\u0639 \u0644\u0645\u0646 \u064a\u0628\u0646\u064a' },
     mission: {
       quote: '\u0645\u0647\u0645\u0651\u062a\u0646\u0627<br><em>\u0647\u064a \u0646\u062c\u0627\u062d\u0643.</em>',
@@ -480,13 +498,6 @@ function applyTranslation(lang) {
   // Mission
   setHTML('.mission-quote p', t.mission.quote);
   setText('.mission-sub', t.mission.sub);
-
-  // Services intro
-  setText('.services-intro__left .label-sm', t.services.label);
-  setHTML('.services-tagline', t.services.tagline);
-  document.querySelectorAll('.services-intro__index-name').forEach(function (el, i) {
-    if (t.services.names[i]) el.textContent = t.services.names[i];
-  });
 
   // Service items (interactive panel)
   document.querySelectorAll('.service-title').forEach(function (el, i) {

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 64" fill="none">
+  <!-- Teal upper V: top point → upper-left corner and top point → upper-right corner -->
+  <polyline points="6,19 28,5 50,19"
+            stroke="#2EC4C4" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- White M letterform — outer legs are the hexagon's vertical flat sides -->
+  <!-- Left outer leg -->
+  <line x1="6"  y1="19" x2="6"  y2="47" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <!-- Left diagonal to centre V -->
+  <line x1="6"  y1="19" x2="28" y2="37" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <!-- Right diagonal from centre V -->
+  <line x1="28" y1="37" x2="50" y2="19" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <!-- Right outer leg -->
+  <line x1="50" y1="19" x2="50" y2="47" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Teal lower V: lower-left corner → bottom point → lower-right corner -->
+  <polyline points="6,47 28,59 50,47"
+            stroke="#2EC4C4" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>
