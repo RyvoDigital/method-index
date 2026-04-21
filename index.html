@@ -23,6 +23,9 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -34,7 +37,7 @@
        ============================================================ -->
   <nav id="nav" class="load-hidden" role="navigation" aria-label="Primary navigation">
     <a href="#hero" class="nav__logo" aria-label="Method Index — return to top">
-      <img src="assets/logo-symbol.svg" alt="Method Index" class="nav__logo-img">
+      <img src="assets/logo-full.png" alt="Method Index" class="nav__logo-img">
     </a>
 
     <ul class="nav__links" role="list">
@@ -81,12 +84,12 @@
       <div class="hero__inner">
 
         <!-- Mission statement -->
-        <div class="hero__statement load-hidden">
+        <div class="hero__statement load-hidden hero__statement--centered">
           <blockquote class="mission-quote">
             <p>Our mission<br><em>is your success.</em></p>
           </blockquote>
-          <p class="mission-sub">We do not adhere to the belief that the unique needs of our clients can be satisfied with a pre-programmed approach.</p>
         </div>
+        <p class="hero__desc load-hidden">Rabih Sater's long experience, healthy track record and the successful brands we've worked with, can provide new or existing business consulting in Business Concept Development, Identity Design, Business Operations, Brand Experience and Strategical Marketing. Demographics, Geography, Area Development and Financial Analysis can also be part of an extensive consulting study to get your business up and operating successfully.</p>
 
       </div>
 
@@ -103,6 +106,10 @@
     <!-- ── Services Showcase ── -->
     <section id="services-showcase" class="services-showcase" data-reveal>
       <span class="label-sm showcase__section-label">What</span>
+      <div class="what-intro" data-reveal="up">
+        <h2 class="what-intro__heading">Our services are customized to the needs and specifications of each client – we do not adhere to the belief that the unique needs of our clients can be satisfied with a pre-programmed approach.</h2>
+        <p class="what-intro__body">This means that we spend a lot of time in the field understanding what makes each business or product micro-market unique. We also get to know people at all levels in order to completely understand their priorities, processes, perceptions and concerns. In addition, we bring a rigorous financial methodology to our work. Every recommendation is evaluated in terms of its highest value and return on your investment. And we know how important your investment is.</p>
+      </div>
       <div class="showcase__inner">
 
         <!-- LEFT: service rows -->
@@ -263,7 +270,7 @@
     <section id="about" aria-label="About">
       <div class="about-inner">
         <div class="about-label" data-reveal="left">
-          <span class="label-sm">Our Story</span>
+          <span class="label-sm">Who</span>
           <div class="about-portrait">
             <img src="assets/rabih-sater.png" alt="Rabih Sater, Founder of Method Index" class="about-portrait-img" loading="lazy">
             <div class="about-portrait-frame" aria-hidden="true"></div>
@@ -271,26 +278,17 @@
           <span class="about-ghost" aria-hidden="true">R</span>
         </div>
         <div class="about-content" data-reveal="right">
-          <h2 class="about-heading">Rabih Sater<br><em>built this from nothing.</em></h2>
+          <h2 class="about-heading">Keep Complexity,<br><em>To Accessibility.</em></h2>
           <div class="about-body">
-            <p>From the age of five, Rabih Sater learned business the way most people never do — by living inside one. Raised in a family of operators, he spent his childhood watching how environments shape customers, how operations shape teams, and how brands either command rooms or disappear into them.</p>
-            <p>By the time he founded Method Index, he had managed a collection of retail and real estate businesses with over 350 employees. Not as an observer. As the person responsible for everything.</p>
+            <p>Born in the Ivory Coast, Rabih Sater developed a taste for business at an early age. As a young boy, he moved to the United States when work and civil strife threatened his family. His father's business in car repair and gas stations put him to work at the age of 5. The family work ethic and drive to succeed in pursuing the American Dream was never left untaught. His father taught him a great deal of all the ins and outs of operating a small business. Eventually, as the family business grew, Rabih's role managing and operating a collection of retail and real estate businesses with over 350 employees under his direction at the age of 24. He was able to operate and develop, fuel stations, retail centers, fast food facilities and modernize operations all within his family business and to global industry clients alike. While in college, he was heavily influenced with creative inspiration thru hospitality legend Ian Schrager's attention to detail, risk taking and aesthetics. This influence brought a realization to how many potential brands lay afloat in the market place, but lack the details and direction to be national or global successes. Method Index was created as the connection to the consumer, a multitude of Rabih's ideas that can manifest into successful realities.</p>
           </div>
           <blockquote class="about-quote">
-            <p>"I've always dreamt of developing businesses through environments and experience. Unfortunately, 90% of brands are missing one or the other."</p>
-            <cite>— Rabih Sater, Founder</cite>
+            <p>"For long as I remember, I've always dreamt of developing businesses thru environments and experience. Environments and experiences are the only two factors that all businesses have in common, unfortunately 90% of brands are missing one or the other."</p>
+            <cite>— Rabih Sater</cite>
           </blockquote>
         </div>
       </div>
     </section>
-
-    <!-- ── Marquee Strip ── -->
-    <div id="marquee-strip" aria-hidden="true">
-      <div class="marquee-track">
-        <span class="marquee-text">Concept Development &nbsp;·&nbsp; Identity Design &nbsp;·&nbsp; Business Operations &nbsp;·&nbsp; Brand Experience &nbsp;·&nbsp; Marketing Strategy &nbsp;·&nbsp; Concept Development &nbsp;·&nbsp; Identity Design &nbsp;·&nbsp; Business Operations &nbsp;·&nbsp; Brand Experience &nbsp;·&nbsp; Marketing Strategy &nbsp;·&nbsp;</span>
-        <span class="marquee-text" aria-hidden="true">Concept Development &nbsp;·&nbsp; Identity Design &nbsp;·&nbsp; Business Operations &nbsp;·&nbsp; Brand Experience &nbsp;·&nbsp; Marketing Strategy &nbsp;·&nbsp; Concept Development &nbsp;·&nbsp; Identity Design &nbsp;·&nbsp; Business Operations &nbsp;·&nbsp; Brand Experience &nbsp;·&nbsp; Marketing Strategy &nbsp;·&nbsp;</span>
-      </div>
-    </div>
 
     <!-- ── Process ── -->
     <section id="process" aria-label="Process">
@@ -330,11 +328,11 @@
 
     <!-- ── Contact ── -->
     <section id="contact" aria-label="Contact">
+      <span class="label-sm contact__section-label">Connect</span>
       <div class="contact-inner">
         <div class="contact-header" data-reveal="left">
-          <span class="label-sm">Connect</span>
           <h2 class="contact-heading">Begin your<br><em>engagement.</em></h2>
-          <p class="contact-sub">We work with a limited number of clients each year. If you are ready to build something extraordinary, we want to hear from you.</p>
+          <p class="contact-sub">We want to be part of your success.</p>
         </div>
         <form class="contact-form" data-reveal="right" novalidate>
           <div class="form-row">
@@ -383,6 +381,10 @@
        FOOTER
        ============================================================ -->
   <footer id="footer" role="contentinfo">
+
+    <div class="footer__logo">
+      <img src="assets/logo-secondary.png" alt="Method Index" class="footer__logo-img">
+    </div>
 
     <p class="footer__copy">
       &copy; 2026 Method Index, LLC. All Rights Reserved.

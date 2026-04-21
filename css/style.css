@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav__logo-img {
-  height: 36px;
+  height: 44px;
   width: auto;
   display: block;
 }
@@ -193,7 +193,7 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 600px;
   background: var(--color-bg);
   display: flex;
-  align-items: flex-end;
+  align-items: stretch;
   overflow: hidden;
 }
 
@@ -230,7 +230,13 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding: 0 var(--space-lg) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 18vh;
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
 }
 
 /* ── Headline ── */
@@ -288,17 +294,35 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
-/* ── Scroll Indicator ── */
-.hero__scroll-indicator {
-  position: absolute;
-  bottom: var(--space-md);
-  left: 50%;
-  transform: translateX(-50%);
+/* ── Hero Statement — Centered Variant ── */
+.hero__statement--centered {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
+  text-align: center;
+  width: 100%;
+}
+
+.hero__desc {
+  position: absolute;
+  bottom: clamp(2rem, 4vh, 3.5rem);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   z-index: 3;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: clamp(0.75rem, 1.2vw, 0.88rem);
+  color: var(--color-cream);
+  line-height: 1.75;
+  width: 90%;
+  max-width: 680px;
+  text-align: center;
+}
+
+/* ── Scroll Indicator ── */
+.hero__scroll-indicator {
+  display: none;
 }
 
 .hero__scroll-label {
@@ -377,8 +401,26 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
   font-size: 0.72rem;
-  color: var(--color-cream-dim);
+  color: var(--color-cream);
   letter-spacing: 0.04em;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.footer__logo-img {
+  height: 56px;
+  width: auto;
+  display: block;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.footer__logo-img:hover {
+  opacity: 1;
 }
 
 .footer__social {
@@ -513,6 +555,31 @@ h1, h2, h3, h4, h5, h6 {
 .showcase__section-label {
   display: block;
   margin-bottom: var(--space-md);
+}
+
+/* ── WHAT Section Intro ── */
+.what-intro {
+  max-width: 860px;
+  margin: 0 auto var(--space-2xl);
+  text-align: center;
+  padding: 0 var(--space-lg);
+}
+
+.what-intro__heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+  color: var(--color-gold);
+  line-height: 1.35;
+  margin-bottom: var(--space-md);
+}
+
+.what-intro__body {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: var(--color-cream);
+  line-height: 1.8;
 }
 
 .showcase__inner {
@@ -918,12 +985,12 @@ html[dir="rtl"] .showcase-row__desc { font-family: 'Cairo', sans-serif; }
 }
 
 #hero .mission-quote p {
-  font-size: clamp(2.5rem, 6vw, 6rem);
-  text-align: left;
+  font-size: clamp(2rem, 4.5vw, 4rem);
+  text-align: center;
 }
 
 #hero .mission-sub {
-  text-align: left;
+  text-align: center;
 }
 
 /* ── Section texture ── */
@@ -1085,6 +1152,8 @@ html[dir="rtl"] .showcase-row__desc { font-family: 'Cairo', sans-serif; }
    Agent 3
    ============================================================ */
 
+/* REMOVED: marquee strip */
+/*
 #marquee-strip {
   background: var(--color-bg-alt);
   border-top: 1px solid rgba(46, 196, 196, 0.2);
@@ -1115,6 +1184,7 @@ html[dir="rtl"] .showcase-row__desc { font-family: 'Cairo', sans-serif; }
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
+*/
 
 /* ============================================================
    PROCESS SECTION
@@ -1331,8 +1401,16 @@ html[dir="rtl"] .showcase-row__desc { font-family: 'Cairo', sans-serif; }
    ============================================================ */
 
 #contact {
+  position: relative;
   background-color: var(--color-bg-alt);
   padding: var(--space-xl) var(--space-lg);
+}
+
+.contact__section-label {
+  position: absolute;
+  top: var(--space-lg);
+  left: var(--space-lg);
+  z-index: 1;
 }
 
 .contact-inner {
@@ -1391,7 +1469,7 @@ html[dir="rtl"] .showcase-row__desc { font-family: 'Cairo', sans-serif; }
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--color-cream-dim);
+  color: var(--color-cream);
 }
 
 .contact-form input,

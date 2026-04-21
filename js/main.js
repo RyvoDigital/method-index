@@ -164,21 +164,39 @@ function initScrollReveals() {
 initScrollReveals();
 
 // ── FORM HANDLER ────────────────────────────────────────────────
+// EmailJS — replace placeholders after signing up at emailjs.com
+emailjs.init('YOUR_PUBLIC_KEY');
+
 var contactForm = document.querySelector('.contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
     var btn = contactForm.querySelector('.btn-submit span');
     var originalText = btn.textContent;
-    btn.textContent = 'Enquiry Sent';
+
+    btn.textContent = 'Sending\u2026';
     contactForm.style.pointerEvents = 'none';
-    contactForm.style.opacity = '0.6';
-    setTimeout(function () {
-      btn.textContent = originalText;
-      contactForm.style.pointerEvents = '';
-      contactForm.style.opacity = '';
-      contactForm.reset();
-    }, 3000);
+    contactForm.style.opacity = '0.7';
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', contactForm)
+      .then(function () {
+        btn.textContent = 'Enquiry Sent';
+        contactForm.reset();
+        setTimeout(function () {
+          btn.textContent = originalText;
+          contactForm.style.pointerEvents = '';
+          contactForm.style.opacity = '';
+        }, 4000);
+      })
+      .catch(function (err) {
+        console.error('EmailJS error:', err);
+        btn.textContent = 'Error \u2014 try again';
+        contactForm.style.pointerEvents = '';
+        contactForm.style.opacity = '';
+        setTimeout(function () {
+          btn.textContent = originalText;
+        }, 3000);
+      });
   });
 }
 
