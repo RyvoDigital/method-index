@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav__logo-img {
-  height: 44px;
+  height: 64px;
   width: auto;
   display: block;
 }
@@ -150,7 +150,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav__links a {
   font-family: 'DM Sans', sans-serif;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: var(--color-cream-dim);
@@ -305,19 +305,34 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero__desc {
   position: absolute;
-  bottom: clamp(2rem, 4vh, 3.5rem);
+  bottom: clamp(6rem, 12vh, 10rem);
   left: 0;
   right: 0;
   margin: 0 auto;
   z-index: 3;
   font-family: 'DM Sans', sans-serif;
-  font-weight: 300;
-  font-size: clamp(0.75rem, 1.2vw, 0.88rem);
-  color: var(--color-cream);
-  line-height: 1.75;
   width: 90%;
   max-width: 680px;
   text-align: center;
+}
+
+.hero__desc-header {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
+  color: var(--color-gold);
+  line-height: 1.5;
+  margin: 0 0 0.6em;
+}
+
+.hero__desc-body {
+  font-weight: 300;
+  font-size: clamp(0.6rem, 0.9vw, 0.72rem);
+  color: var(--color-cream);
+  line-height: 1.75;
+  margin: 0;
+  text-align: justify;
+  text-align-last: center;
 }
 
 /* ── Scroll Indicator ── */
@@ -548,7 +563,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── Services Showcase ─────────────────────────────────────── */
 #services-showcase {
-  padding: var(--space-xl) clamp(var(--space-lg), 8vw, var(--space-xl));
+  padding: var(--space-xl) clamp(var(--space-lg), 8vw, var(--space-xl)) var(--space-md);
   overflow: hidden;
 }
 
@@ -559,8 +574,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── WHAT Section Intro ── */
 .what-intro {
-  max-width: 860px;
-  margin: 0 auto var(--space-2xl);
+  max-width: 1000px;
+  margin: 0 auto var(--space-md);
   text-align: center;
   padding: 0 var(--space-lg);
 }
@@ -572,14 +587,18 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-gold);
   line-height: 1.35;
   margin-bottom: var(--space-md);
+  text-align: justify;
+  text-align-last: center;
 }
 
 .what-intro__body {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   color: var(--color-cream);
   line-height: 1.8;
+  text-align: justify;
+  text-align-last: center;
 }
 
 .showcase__inner {
@@ -777,6 +796,7 @@ html[dir="rtl"] .showcase-row__desc { font-family: 'Cairo', sans-serif; }
   position: relative;
   min-height: 320px;
   transition: opacity 0.6s ease;
+  padding-left: var(--space-lg);
 }
 
 .service-item {
@@ -849,16 +869,17 @@ html[dir="rtl"] .showcase-row__desc { font-family: 'Cairo', sans-serif; }
 
 /* ── Services Interactive Section ── */
 .services-interactive {
-  padding: var(--space-xl) var(--space-lg);
+  padding: var(--space-xl) clamp(var(--space-lg), 8vw, var(--space-xl));
 }
 
 .services-interactive__inner {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: var(--space-xl);
+  gap: var(--space-sm);
   align-items: center;
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding-left: 3rem;
 }
 
 /* Bull image — PNG has native transparency, no blend mode needed */
@@ -963,7 +984,7 @@ html[dir="rtl"] .showcase-row__desc { font-family: 'Cairo', sans-serif; }
 .mission-quote p {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 300;
-  font-size: clamp(2rem, 6vw, 5.5rem);
+  font-size: clamp(1.2rem, 3vw, 2.8rem);
   color: var(--color-cream);
   line-height: 1.1;
 }
@@ -971,6 +992,7 @@ html[dir="rtl"] .showcase-row__desc { font-family: 'Cairo', sans-serif; }
 .mission-quote em {
   font-style: italic;
   color: var(--color-gold);
+  font-size: 1.5em;
 }
 
 .mission-sub {
@@ -985,7 +1007,7 @@ html[dir="rtl"] .showcase-row__desc { font-family: 'Cairo', sans-serif; }
 }
 
 #hero .mission-quote p {
-  font-size: clamp(2rem, 4.5vw, 4rem);
+  font-size: clamp(1.2rem, 3vw, 2.8rem);
   text-align: center;
 }
 
@@ -1021,15 +1043,16 @@ html[dir="rtl"] .showcase-row__desc { font-family: 'Cairo', sans-serif; }
 
 #about {
   background-color: var(--color-bg);
-  padding: var(--space-xl) var(--space-lg);
+  padding: var(--space-xl) clamp(var(--space-lg), 8vw, var(--space-xl));
 }
 
 .about-inner {
   display: grid;
   grid-template-columns: 1fr 1.6fr;
-  gap: var(--space-xl);
-  max-width: 1200px;
+  gap: var(--space-sm);
+  max-width: 1000px;
   margin: 0 auto;
+  padding-left: 3rem;
   align-items: start;
 }
 
@@ -1079,9 +1102,9 @@ html[dir="rtl"] .showcase-row__desc { font-family: 'Cairo', sans-serif; }
 
 .about-heading {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 3.8vw, 3rem);
   font-weight: 300;
-  color: var(--color-cream);
+  color: var(--color-gold);
   line-height: 1.1;
   margin-bottom: var(--space-md);
 }
@@ -1097,7 +1120,8 @@ html[dir="rtl"] .showcase-row__desc { font-family: 'Cairo', sans-serif; }
   font-size: 0.95rem;
   color: var(--color-cream-dim);
   line-height: 1.85;
-  max-width: 58ch;
+  text-align: justify;
+  text-align-last: left;
 }
 
 .about-body p + p {
@@ -1114,8 +1138,8 @@ html[dir="rtl"] .showcase-row__desc { font-family: 'Cairo', sans-serif; }
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 300;
-  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-  color: var(--color-cream);
+  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+  color: var(--color-gold);
   line-height: 1.5;
 }
 
@@ -1403,19 +1427,19 @@ html[dir="rtl"] .showcase-row__desc { font-family: 'Cairo', sans-serif; }
 #contact {
   position: relative;
   background-color: var(--color-bg-alt);
-  padding: var(--space-xl) var(--space-lg);
+  padding: var(--space-xl) clamp(var(--space-lg), 8vw, var(--space-xl));
 }
 
+.about__section-label,
 .contact__section-label {
-  position: absolute;
-  top: var(--space-lg);
-  left: var(--space-lg);
-  z-index: 1;
+  display: block;
+  margin-bottom: var(--space-md);
 }
 
 .contact-inner {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding-left: 3rem;
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: var(--space-xl);
@@ -1433,6 +1457,7 @@ html[dir="rtl"] .showcase-row__desc { font-family: 'Cairo', sans-serif; }
   font-weight: 300;
   color: var(--color-cream);
   line-height: 1.1;
+  margin-top: -0.5rem;
 }
 
 .contact-heading em {
@@ -1461,6 +1486,15 @@ html[dir="rtl"] .showcase-row__desc { font-family: 'Cairo', sans-serif; }
   flex-direction: column;
   gap: 0.5rem;
   margin-bottom: var(--space-md);
+}
+
+.contact-form__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: clamp(1.9rem, 3.6vw, 2.9rem);
+  color: var(--color-gold);
+  margin-bottom: var(--space-md);
+  text-align: center;
 }
 
 .contact-form label {
