@@ -145,6 +145,9 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: var(--space-lg);
   list-style: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav__links a {

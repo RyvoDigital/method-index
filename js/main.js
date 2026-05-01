@@ -204,7 +204,15 @@ if (contactForm) {
 var TRANSLATIONS = {
   en: {
     nav: { whatWeDo: 'What', ourStory: 'Who', connect: 'Connect' },
-    hero: { tagline: 'Built for Those Who Build' },
+    hero: {
+      tagline: 'Built for Those Who Build',
+      descHeader: 'Method Index integrates a wide array of disciplines to our Consulting Services.',
+      descBody: 'Rabih Sater\'s long experience, healthy track record and the successful brands we\'ve worked with, can provide new or existing business consulting in Business Concept Development, Identity Design, Business Operations, Brand Experience and Strategical Marketing. Demographics, Geography, Area Development and Financial Analysis can also be part of an extensive consulting study to get your business up and operating successfully.'
+    },
+    whatIntro: {
+      heading: 'Our services are customized to the needs and specifications of each client – we do not adhere to the belief that the unique needs of our clients can be satisfied with a pre-programmed approach.',
+      body: 'This means that we spend a lot of time in the field understanding what makes each business or product micro-market unique. We also get to know people at all levels in order to completely understand their priorities, processes, perceptions and concerns. In addition, we bring a rigorous financial methodology to our work. Every recommendation is evaluated in terms of its highest value and return on your investment. And we know how important your investment is.'
+    },
     mission: {
       quote: 'Our mission<br><em>is your success.</em>',
       sub: 'We do not adhere to the belief that the unique needs of our clients can be satisfied with a pre-programmed approach.'
@@ -260,7 +268,15 @@ var TRANSLATIONS = {
 
   es: {
     nav: { whatWeDo: 'Qué', ourStory: 'Quién', connect: 'Contacto' },
-    hero: { tagline: 'Construido para Quienes Construyen' },
+    hero: {
+      tagline: 'Construido para Quienes Construyen',
+      descHeader: 'Method Index integra una amplia gama de disciplinas en nuestros Servicios de Consultor\u00eda.',
+      descBody: 'La larga experiencia de Rabih Sater, su historial exitoso y las reconocidas marcas con las que hemos trabajado nos permiten ofrecer consultor\u00eda empresarial a negocios nuevos o existentes en Desarrollo de Concepto, Dise\u00f1o de Identidad, Operaciones Empresariales, Experiencia de Marca y Marketing Estrat\u00e9gico. La demograf\u00eda, geograf\u00eda, desarrollo de zonas y an\u00e1lisis financiero tambi\u00e9n pueden ser parte de un estudio de consultor\u00eda exhaustivo para poner en marcha su negocio con \u00e9xito.'
+    },
+    whatIntro: {
+      heading: 'Nuestros servicios est\u00e1n personalizados seg\u00fan las necesidades y especificaciones de cada cliente \u2013 no creemos que las necesidades \u00fanicas de nuestros clientes puedan satisfacerse con un enfoque predise\u00f1ado.',
+      body: 'Esto significa que pasamos mucho tiempo en el campo comprendiendo qu\u00e9 hace \u00fanico a cada negocio o producto en su micro-mercado. Tambi\u00e9n llegamos a conocer a las personas en todos los niveles para entender completamente sus prioridades, procesos, percepciones y preocupaciones. Adem\u00e1s, aplicamos una rigurosa metodolog\u00eda financiera en nuestro trabajo. Cada recomendaci\u00f3n se eval\u00faa en t\u00e9rminos de su mayor valor y retorno sobre su inversi\u00f3n. Y sabemos lo importante que es su inversi\u00f3n.'
+    },
     mission: {
       quote: 'Nuestra misi\u00f3n<br><em>es tu \u00e9xito.</em>',
       sub: 'No creemos que las necesidades \u00fanicas de nuestros clientes puedan satisfacerse con un enfoque predise\u00f1ado.'
@@ -316,7 +332,15 @@ var TRANSLATIONS = {
 
   fr: {
     nav: { whatWeDo: 'Quoi', ourStory: 'Qui', connect: 'Contact' },
-    hero: { tagline: 'Con\u00e7u pour Ceux Qui Construisent' },
+    hero: {
+      tagline: 'Con\u00e7u pour Ceux Qui Construisent',
+      descHeader: 'Method Index int\u00e8gre un large \u00e9ventail de disciplines dans nos Services de Conseil.',
+      descBody: 'La longue exp\u00e9rience de Rabih Sater, son solide bilan et les marques reconnues avec lesquelles nous avons travaill\u00e9 nous permettent d\u2019offrir des conseils en affaires \u00e0 des entreprises nouvelles ou existantes dans le D\u00e9veloppement de Concept, le Design d\u2019Identit\u00e9, les Op\u00e9rations Commerciales, l\u2019Exp\u00e9rience de Marque et le Marketing Strat\u00e9gique. La d\u00e9mographie, la g\u00e9ographie, le d\u00e9veloppement de zones et l\u2019analyse financi\u00e8re peuvent \u00e9galement faire partie d\u2019une \u00e9tude de conseil approfondie pour faire d\u00e9marrer votre entreprise avec succ\u00e8s.'
+    },
+    whatIntro: {
+      heading: 'Nos services sont personnalis\u00e9s selon les besoins et sp\u00e9cifications de chaque client \u2013 nous ne croyons pas que les besoins uniques de nos clients peuvent \u00eatre satisfaits par une approche pr\u00e9con\u00e7ue.',
+      body: 'Cela signifie que nous passons beaucoup de temps sur le terrain \u00e0 comprendre ce qui rend chaque entreprise ou produit unique dans son micro-march\u00e9. Nous apprenons \u00e9galement \u00e0 conna\u00eetre les personnes \u00e0 tous les niveaux afin de comprendre pleinement leurs priorit\u00e9s, processus, perceptions et pr\u00e9occupations. De plus, nous appliquons une m\u00e9thodologie financi\u00e8re rigoureuse \u00e0 notre travail. Chaque recommandation est \u00e9valu\u00e9e en termes de valeur maximale et de retour sur votre investissement. Et nous savons \u00e0 quel point votre investissement est important.'
+    },
     mission: {
       quote: 'Notre mission,<br><em>c\u2019est votre succ\u00e8s.</em>',
       sub: 'Nous ne croyons pas que les besoins uniques de nos clients puissent \u00eatre satisfaits par une approche pr\u00e9con\u00e7ue.'
@@ -372,7 +396,15 @@ var TRANSLATIONS = {
 
   it: {
     nav: { whatWeDo: 'Cosa', ourStory: 'Chi', connect: 'Contatti' },
-    hero: { tagline: 'Fatto per Chi Costruisce' },
+    hero: {
+      tagline: 'Fatto per Chi Costruisce',
+      descHeader: 'Method Index integra un\'ampia gamma di discipline nei nostri Servizi di Consulenza.',
+      descBody: 'La lunga esperienza di Rabih Sater, il suo solido track record e i brand di successo con cui abbiamo lavorato ci consentono di offrire consulenza aziendale a imprese nuove o esistenti in Sviluppo del Concetto, Design dell\'Identità, Operazioni Aziendali, Brand Experience e Marketing Strategico. La demografia, la geografia, lo sviluppo delle aree e l\'analisi finanziaria possono anche far parte di uno studio di consulenza approfondito per avviare con successo la tua attività.'
+    },
+    whatIntro: {
+      heading: 'I nostri servizi sono personalizzati in base alle esigenze e specifiche di ciascun cliente – non crediamo che le esigenze uniche dei nostri clienti possano essere soddisfatte con un approccio standardizzato.',
+      body: 'Questo significa che trascorriamo molto tempo sul campo a capire cosa rende unico ogni business o prodotto nel suo micro-mercato. Impariamo anche a conoscere le persone a tutti i livelli per comprendere appieno le loro priorità, processi, percezioni e preoccupazioni. Inoltre, applichiamo una rigorosa metodologia finanziaria al nostro lavoro. Ogni raccomandazione viene valutata in termini di massimo valore e ritorno sul tuo investimento. E sappiamo quanto sia importante il tuo investimento.'
+    },
     mission: {
       quote: 'La nostra missione<br><em>\u00e8 il tuo successo.</em>',
       sub: 'Non crediamo che le esigenze uniche dei nostri clienti possano essere soddisfatte con un approccio standardizzato.'
@@ -428,7 +460,15 @@ var TRANSLATIONS = {
 
   ar: {
     nav: { whatWeDo: 'ماذا', ourStory: 'من', connect: 'تواصل' },
-    hero: { tagline: '\u0635\u064f\u0646\u0639 \u0644\u0645\u0646 \u064a\u0628\u0646\u064a' },
+    hero: {
+      tagline: '\u0635\u064f\u0646\u0639 \u0644\u0645\u0646 \u064a\u0628\u0646\u064a',
+      descHeader: 'Method Index \u062a\u062f\u0645\u062c \u0645\u062c\u0645\u0648\u0639\u0629 \u0648\u0627\u0633\u0639\u0629 \u0645\u0646 \u0627\u0644\u062a\u062e\u0635\u0635\u0627\u062a \u0641\u064a \u062e\u062f\u0645\u0627\u062a \u0627\u0644\u0627\u0633\u062a\u0634\u0627\u0631\u0627\u062a \u0644\u062f\u064a\u0646\u0627.',
+      descBody: '\u062a\u062a\u064a\u062d \u062e\u0628\u0631\u0629 \u0631\u0628\u064a\u0639 \u0633\u0627\u0637\u0631 \u0627\u0644\u0637\u0648\u064a\u0644\u0629\u060c \u0648\u0633\u062c\u0644\u0647 \u0627\u0644\u062d\u0627\u0641\u0644 \u0628\u0627\u0644\u0646\u062c\u0627\u062d\u0627\u062a\u060c \u0648\u0627\u0644\u0639\u0644\u0627\u0645\u0627\u062a \u0627\u0644\u062a\u062c\u0627\u0631\u064a\u0629 \u0627\u0644\u0646\u0627\u062c\u062d\u0629 \u0627\u0644\u062a\u064a \u0639\u0645\u0644\u0646\u0627 \u0645\u0639\u0647\u0627\u060c \u062a\u0642\u062f\u064a\u0645 \u0627\u0633\u062a\u0634\u0627\u0631\u0627\u062a \u062a\u062c\u0627\u0631\u064a\u0629 \u0644\u0644\u0645\u0634\u0627\u0631\u064a\u0639 \u0627\u0644\u062c\u062f\u064a\u062f\u0629 \u0623\u0648 \u0627\u0644\u0642\u0627\u0626\u0645\u0629 \u0641\u064a \u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0645\u0641\u0647\u0648\u0645 \u0648\u062a\u0635\u0645\u064a\u0645 \u0627\u0644\u0647\u0648\u064a\u0629 \u0648\u0627\u0644\u0639\u0645\u0644\u064a\u0627\u062a \u0627\u0644\u062a\u062c\u0627\u0631\u064a\u0629 \u0648\u062a\u062c\u0631\u0628\u0629 \u0627\u0644\u0639\u0644\u0627\u0645\u0629 \u0648\u0627\u0644\u062a\u0633\u0648\u064a\u0642 \u0627\u0644\u0627\u0633\u062a\u0631\u0627\u062a\u064a\u062c\u064a. \u0643\u0645\u0627 \u064a\u0645\u0643\u0646 \u0623\u0646 \u062a\u0634\u0645\u0644 \u0627\u0644\u062f\u0631\u0627\u0633\u0629 \u0627\u0644\u062a\u062d\u0644\u064a\u0644 \u0627\u0644\u062f\u064a\u0645\u0648\u063a\u0631\u0627\u0641\u064a \u0648\u0627\u0644\u062c\u063a\u0631\u0627\u0641\u064a \u0648\u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0645\u0646\u0627\u0637\u0642 \u0648\u0627\u0644\u062a\u062d\u0644\u064a\u0644 \u0627\u0644\u0645\u0627\u0644\u064a \u0644\u0645\u0633\u0627\u0639\u062f\u062a\u0643 \u0639\u0644\u0649 \u0625\u0637\u0644\u0627\u0642 \u0645\u0634\u0631\u0648\u0639\u0643 \u0628\u0646\u062c\u0627\u062d.'
+    },
+    whatIntro: {
+      heading: '\u062e\u062f\u0645\u0627\u062a\u0646\u0627 \u0645\u062e\u0635\u0651\u0635\u0629 \u0648\u0641\u0642 \u0627\u062d\u062a\u064a\u0627\u062c\u0627\u062a \u0648\u0645\u0648\u0627\u0635\u0641\u0627\u062a \u0643\u0644 \u0639\u0645\u064a\u0644 \u2013 \u0644\u0627 \u0646\u0624\u0645\u0646 \u0628\u0623\u0646 \u0627\u0644\u0627\u062d\u062a\u064a\u0627\u062c\u0627\u062a \u0627\u0644\u0641\u0631\u064a\u062f\u0629 \u0644\u0639\u0645\u0644\u0627\u0626\u0646\u0627 \u064a\u0645\u0643\u0646 \u062a\u0644\u0628\u064a\u062a\u0647\u0627 \u0645\u0646 \u062e\u0644\u0627\u0644 \u0646\u0647\u062c \u062c\u0627\u0647\u0632 \u0648\u0645\u0628\u0631\u0645\u062c \u0645\u0633\u0628\u0642\u0627\u064b.',
+      body: '\u0647\u0630\u0627 \u064a\u0639\u0646\u064a \u0623\u0646\u0646\u0627 \u0646\u0642\u0636\u064a \u0648\u0642\u062a\u0627\u064b \u0637\u0648\u064a\u0644\u0627\u064b \u0641\u064a \u0627\u0644\u0645\u064a\u062f\u0627\u0646 \u0644\u0641\u0647\u0645 \u0645\u0627 \u064a\u062c\u0639\u0644 \u0643\u0644 \u0639\u0645\u0644 \u0623\u0648 \u0645\u0646\u062a\u062c \u0641\u0631\u064a\u062f\u0627\u064b \u0641\u064a \u0633\u0648\u0642\u0647 \u0627\u0644\u062f\u0642\u064a\u0642. \u0643\u0645\u0627 \u0646\u062a\u0639\u0631\u0651\u0641 \u0639\u0644\u0649 \u0627\u0644\u0646\u0627\u0633 \u0639\u0644\u0649 \u062c\u0645\u064a\u0639 \u0627\u0644\u0645\u0633\u062a\u0648\u064a\u0627\u062a \u0644\u0641\u0647\u0645 \u0623\u0648\u0644\u0648\u064a\u0627\u062a\u0647\u0645 \u0648\u0639\u0645\u0644\u064a\u0627\u062a\u0647\u0645 \u0648\u062a\u0635\u0648\u0631\u0627\u062a\u0647\u0645 \u0648\u0645\u062e\u0627\u0648\u0641\u0647\u0645 \u0628\u0634\u0643\u0644 \u0643\u0627\u0645\u0644. \u0628\u0627\u0644\u0625\u0636\u0627\u0641\u0629 \u0625\u0644\u0649 \u0630\u0644\u0643\u060c \u0646\u0637\u0628\u0651\u0642 \u0645\u0646\u0647\u062c\u064a\u0629 \u0645\u0627\u0644\u064a\u0629 \u0635\u0627\u0631\u0645\u0629 \u0641\u064a \u0639\u0645\u0644\u0646\u0627. \u062a\u064f\u0642\u064a\u0651\u0645 \u0643\u0644 \u062a\u0648\u0635\u064a\u0629 \u0645\u0646 \u062d\u064a\u062b \u0623\u0639\u0644\u0649 \u0642\u064a\u0645\u0629 \u0648\u0639\u0627\u0626\u062f \u0639\u0644\u0649 \u0627\u0633\u062a\u062b\u0645\u0627\u0631\u0643. \u0648\u0646\u062d\u0646 \u0646\u062f\u0631\u0643 \u062c\u064a\u062f\u0627\u064b \u0645\u062f\u0649 \u0623\u0647\u0645\u064a\u0629 \u0627\u0633\u062a\u062b\u0645\u0627\u0631\u0643.'
+    },
     mission: {
       quote: '\u0645\u0647\u0645\u0651\u062a\u0646\u0627<br><em>\u0647\u064a \u0646\u062c\u0627\u062d\u0643.</em>',
       sub: '\u0644\u0627 \u0646\u0624\u0645\u0646 \u0628\u0623\u0646 \u0627\u062d\u062a\u064a\u0627\u062c\u0627\u062a \u0639\u0645\u0644\u0627\u0626\u0646\u0627 \u0627\u0644\u0641\u0631\u064a\u062f\u0629 \u064a\u0645\u0643\u0646 \u062a\u0644\u0628\u064a\u062a\u0647\u0627 \u0645\u0646 \u062e\u0644\u0627\u0644 \u0646\u0647\u062c \u062c\u0627\u0647\u0632 \u0648\u0645\u0628\u0631\u0645\u062c \u0645\u0633\u0628\u0642\u0627\u064b.'
@@ -512,6 +552,14 @@ function applyTranslation(lang) {
 
   // Hero
   setText('.hero__tagline', t.hero.tagline);
+  if (t.hero.descHeader) setText('.hero__desc-header', t.hero.descHeader);
+  if (t.hero.descBody)   setText('.hero__desc-body',   t.hero.descBody);
+
+  // What intro
+  if (t.whatIntro) {
+    setText('.what-intro__heading', t.whatIntro.heading);
+    setText('.what-intro__body',    t.whatIntro.body);
+  }
 
   // Mission
   setHTML('.mission-quote p', t.mission.quote);
