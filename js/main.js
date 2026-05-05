@@ -163,10 +163,9 @@ function initScrollReveals() {
 }
 initScrollReveals();
 
-// ── FORM HANDLER ────────────────────────────────────────────────
-// EmailJS — replace placeholders after signing up at emailjs.com
-emailjs.init('YOUR_PUBLIC_KEY');
-
+// ── FORM HANDLER ──────────────────────────────────────────────
+// Uses Web3Forms (free). Get your access key at web3forms.com and
+// paste it into the hidden input in index.html.
 var contactForm = document.querySelector('.contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', function (e) {
@@ -174,29 +173,37 @@ if (contactForm) {
     var btn = contactForm.querySelector('.btn-submit span');
     var originalText = btn.textContent;
 
-    btn.textContent = 'Sending\u2026';
+    btn.textContent = 'Sending…';
     contactForm.style.pointerEvents = 'none';
     contactForm.style.opacity = '0.7';
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', contactForm)
-      .then(function () {
-        btn.textContent = 'Enquiry Sent';
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(contactForm)
+    })
+    .then(function (res) { return res.json(); })
+    .then(function (data) {
+      if (data.success) {
+        btn.textContent = 'Enquiry Sent ✓';
         contactForm.reset();
         setTimeout(function () {
           btn.textContent = originalText;
           contactForm.style.pointerEvents = '';
           contactForm.style.opacity = '';
         }, 4000);
-      })
-      .catch(function (err) {
-        console.error('EmailJS error:', err);
-        btn.textContent = 'Error \u2014 try again';
-        contactForm.style.pointerEvents = '';
-        contactForm.style.opacity = '';
-        setTimeout(function () {
-          btn.textContent = originalText;
-        }, 3000);
-      });
+      } else {
+        throw new Error(data.message || 'Submission failed');
+      }
+    })
+    .catch(function (err) {
+      console.error('Form error:', err);
+      btn.textContent = 'Error — try again';
+      contactForm.style.pointerEvents = '';
+      contactForm.style.opacity = '';
+      setTimeout(function () {
+        btn.textContent = originalText;
+      }, 3000);
+    });
   });
 }
 
