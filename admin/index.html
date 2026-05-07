@@ -7,5 +7,97 @@
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    CMS.init({
+      config: {
+        backend: {
+          name: 'github',
+          repo: 'RyvoDigital/method-index',
+          branch: 'main',
+          base_url: 'https://www.methodindex.com',
+          auth_endpoint: 'api/auth'
+        },
+        media_folder: 'assets',
+        public_folder: 'assets',
+        collections: [
+          {
+            name: 'content',
+            label: 'Site Content',
+            files: [
+              {
+                name: 'english',
+                label: 'English Content',
+                file: 'content.json',
+                fields: [
+                  {
+                    label: 'Hero Section',
+                    name: 'hero',
+                    widget: 'object',
+                    fields: [
+                      { label: 'Description (Short Header)', name: 'descHeader', widget: 'string', hint: 'The bold summary line beneath the mission quote.' },
+                      { label: 'Description (Body)', name: 'descBody', widget: 'text', hint: 'The longer paragraph in the hero section.' },
+                      { label: 'Background Image', name: 'backgroundImage', widget: 'image', hint: 'The full-screen background photo.' }
+                    ]
+                  },
+                  {
+                    label: 'Mission Statement',
+                    name: 'mission',
+                    widget: 'object',
+                    fields: [
+                      { label: 'First Line', name: 'line1', widget: 'string', hint: 'Normal text, e.g. "Our mission"' },
+                      { label: 'Italic Line', name: 'line2', widget: 'string', hint: 'Displayed in italics, e.g. "is your success."' },
+                      { label: 'Sub-text', name: 'sub', widget: 'string' }
+                    ]
+                  },
+                  {
+                    label: 'What We Do — Intro',
+                    name: 'whatIntro',
+                    widget: 'object',
+                    fields: [
+                      { label: 'Heading', name: 'heading', widget: 'text' },
+                      { label: 'Body', name: 'body', widget: 'text' }
+                    ]
+                  },
+                  {
+                    label: 'Services (5 items)',
+                    name: 'services',
+                    widget: 'list',
+                    fields: [
+                      { label: 'Service Name', name: 'name', widget: 'string' },
+                      { label: 'Description', name: 'desc', widget: 'text' }
+                    ]
+                  },
+                  {
+                    label: 'About (Who)',
+                    name: 'about',
+                    widget: 'object',
+                    fields: [
+                      { label: 'Heading — First Line', name: 'heading1', widget: 'string', hint: 'Normal text, e.g. "Keep Complexity,"' },
+                      { label: 'Heading — Italic Line', name: 'heading2', widget: 'string', hint: 'Displayed in italics, e.g. "To Accessibility."' },
+                      { label: 'Biography', name: 'body', widget: 'text', hint: 'The full biography paragraph.' },
+                      { label: 'Blockquote', name: 'quote', widget: 'text' },
+                      { label: 'Quote Attribution', name: 'cite', widget: 'string', hint: 'e.g. "— Rabih Sater"' },
+                      { label: 'Portrait Photo', name: 'portraitImage', widget: 'image' }
+                    ]
+                  },
+                  {
+                    label: 'Contact Section',
+                    name: 'contact',
+                    widget: 'object',
+                    fields: [
+                      { label: 'Heading — First Line', name: 'heading1', widget: 'string' },
+                      { label: 'Heading — Italic Line', name: 'heading2', widget: 'string' },
+                      { label: 'Sub-text', name: 'sub', widget: 'text' }
+                    ]
+                  },
+                  { label: 'Footer Text', name: 'footer', widget: 'string', hint: 'e.g. "© 2026 Method Index, LLC. All Rights Reserved."' }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    });
+  </script>
 </body>
 </html>
