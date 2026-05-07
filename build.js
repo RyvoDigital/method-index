@@ -6,7 +6,7 @@ const c = JSON.parse(fs.readFileSync(path.join(__dirname, 'content.json'), 'utf8
 const serviceNames = c.services.map(function (s) { return s.name; });
 const serviceDescs = c.services.map(function (s) { return s.desc; });
 
-const marquee = (serviceNames.join(' &nbsp;·&nbsp; ') + ' &nbsp;·&nbsp; ').repeat(2);
+const marquee = (serviceNames.join(' &nbsp;\xb7&nbsp; ') + ' &nbsp;\xb7&nbsp; ').repeat(2);
 
 const contentEN = {
   nav: { whatWeDo: 'What', ourStory: 'Who', connect: 'Connect' },
@@ -32,11 +32,11 @@ const contentEN = {
     marquee: marquee
   },
   about: {
-    label:        'Who',
-    heading:      c.about.heading1 + '<br><em>' + c.about.heading2 + '</em>',
-    body:         c.about.body,
-    quote:        c.about.quote,
-    cite:         c.about.cite,
+    label:         'Who',
+    heading:       c.about.heading1 + '<br><em>' + c.about.heading2 + '</em>',
+    body:          c.about.body,
+    quote:         c.about.quote,
+    cite:          c.about.cite,
     portraitImage: c.about.portraitImage
   },
   process: {
@@ -52,15 +52,20 @@ const contentEN = {
     pricing: 'Engagements from <em>$50,000</em> — structured to the specific needs of your business.'
   },
   contact: {
-    label:     'Connect',
-    heading:   c.contact.heading1 + '<br><em>' + c.contact.heading2 + '</em>',
-    sub:       c.contact.sub,
-    name:      'Name',    namePh:     'Your full name',
-    email:     'Email',   emailPh:    'your@email.com',
-    company:   'Company', companyPh:  'Company or brand name',
-    message:   'Tell us about your vision',
-    messagePh: 'Describe your business, your goals, and what you’re looking to achieve.',
-    submit:    'Send Enquiry'
+    label:           'Connect',
+    heading:         c.contact.heading1 + '<br><em>' + c.contact.heading2 + '</em>',
+    sub:             c.contact.sub,
+    formTitle:       'We want to be part of your success.',
+    firstName:       'First Name',    firstNamePh:    'First name',
+    lastName:        'Last Name',     lastNamePh:     'Last name',
+    email:           'Email',         emailPh:        'your@email.com',
+    phone:           'Phone Number',  phonePh:        '+1 000 000 0000',
+    company:         'Company',       companyPh:      'Company or brand name',
+    aboutYourself:   'Tell us about yourself',
+    aboutYourselfPh: 'Your background, experience, and what drives you.',
+    aboutBusiness:   'Tell us about your business or product',
+    aboutBusinessPh: 'Describe your business, your goals, and what you\'re looking to achieve.',
+    submit:          'Send Enquiry'
   },
   footer: c.footer
 };

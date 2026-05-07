@@ -263,11 +263,14 @@ var TRANSLATIONS = {
       label: 'Connect',
       heading: 'Begin your<br><em>engagement.</em>',
       sub: 'We work with a limited number of clients each year. If you are ready to build something extraordinary, we want to hear from you.',
-      name: 'Name', namePh: 'Your full name',
+      formTitle: 'We want to be part of your success.',
+      firstName: 'First Name', firstNamePh: 'First name',
+      lastName: 'Last Name', lastNamePh: 'Last name',
       email: 'Email', emailPh: 'your@email.com',
+      phone: 'Phone Number', phonePh: '+1 000 000 0000',
       company: 'Company', companyPh: 'Company or brand name',
-      message: 'Tell us about your vision',
-      messagePh: 'Describe your business, your goals, and what you\u2019re looking to achieve.',
+      aboutYourself: 'Tell us about yourself', aboutYourselfPh: 'Your background, experience, and what drives you.',
+      aboutBusiness: 'Tell us about your business or product', aboutBusinessPh: 'Describe your business, your goals, and what you\u2019re looking to achieve.',
       submit: 'Send Enquiry'
     },
     footer: '&copy; 2026 Method Index, LLC. All Rights Reserved.'
@@ -327,11 +330,14 @@ var TRANSLATIONS = {
       label: 'Contacto',
       heading: 'Comienza tu<br><em>colaboraci\u00f3n.</em>',
       sub: 'Trabajamos con un n\u00famero limitado de clientes cada a\u00f1o. Si est\u00e1s listo para construir algo extraordinario, queremos saber de ti.',
-      name: 'Nombre', namePh: 'Tu nombre completo',
+      formTitle: 'Queremos ser parte de tu \u00e9xito.',
+      firstName: 'Nombre', firstNamePh: 'Tu nombre',
+      lastName: 'Apellido', lastNamePh: 'Tu apellido',
       email: 'Correo electr\u00f3nico', emailPh: 'tu@correo.com',
+      phone: 'N\u00famero de tel\u00e9fono', phonePh: '+1 000 000 0000',
       company: 'Empresa', companyPh: 'Nombre de empresa o marca',
-      message: 'Cu\u00e9ntanos sobre tu visi\u00f3n',
-      messagePh: 'Describe tu negocio, tus objetivos y lo que deseas lograr.',
+      aboutYourself: 'Cu\u00e9ntanos sobre ti', aboutYourselfPh: 'Tu trayectoria, experiencia y lo que te motiva.',
+      aboutBusiness: 'Cu\u00e9ntanos sobre tu negocio o producto', aboutBusinessPh: 'Describe tu negocio, tus objetivos y lo que deseas lograr.',
       submit: 'Enviar Consulta'
     },
     footer: '&copy; 2026 Method Index, LLC. Todos los derechos reservados.'
@@ -391,11 +397,14 @@ var TRANSLATIONS = {
       label: 'Contact',
       heading: 'Commencez votre<br><em>engagement.</em>',
       sub: 'Nous travaillons avec un nombre limit\u00e9 de clients chaque ann\u00e9e. Si vous \u00eates pr\u00eat \u00e0 construire quelque chose d\u2019extraordinaire, nous voulons vous entendre.',
-      name: 'Nom', namePh: 'Votre nom complet',
+      formTitle: 'Nous voulons faire partie de votre succ\u00e8s.',
+      firstName: 'Pr\u00e9nom', firstNamePh: 'Votre pr\u00e9nom',
+      lastName: 'Nom', lastNamePh: 'Votre nom de famille',
       email: 'Email', emailPh: 'votre@email.com',
+      phone: 'Num\u00e9ro de t\u00e9l\u00e9phone', phonePh: '+1 000 000 0000',
       company: 'Entreprise', companyPh: 'Nom de l\u2019entreprise ou de la marque',
-      message: 'Parlez-nous de votre vision',
-      messagePh: 'D\u00e9crivez votre entreprise, vos objectifs et ce que vous souhaitez accomplir.',
+      aboutYourself: 'Parlez-nous de vous', aboutYourselfPh: 'Votre parcours, exp\u00e9rience et ce qui vous motive.',
+      aboutBusiness: 'Parlez-nous de votre entreprise ou produit', aboutBusinessPh: 'D\u00e9crivez votre entreprise, vos objectifs et ce que vous souhaitez accomplir.',
       submit: 'Envoyer'
     },
     footer: '&copy; 2026 Method Index, LLC. Tous droits r\u00e9serv\u00e9s.'
@@ -455,11 +464,14 @@ var TRANSLATIONS = {
       label: 'Contatti',
       heading: 'Inizia il tuo<br><em>percorso.</em>',
       sub: 'Lavoriamo con un numero limitato di clienti ogni anno. Se sei pronto a costruire qualcosa di straordinario, vogliamo sentirti.',
-      name: 'Nome', namePh: 'Il tuo nome completo',
+      formTitle: 'Vogliamo essere parte del tuo successo.',
+      firstName: 'Nome', firstNamePh: 'Il tuo nome',
+      lastName: 'Cognome', lastNamePh: 'Il tuo cognome',
       email: 'Email', emailPh: 'tua@email.com',
+      phone: 'Numero di telefono', phonePh: '+1 000 000 0000',
       company: 'Azienda', companyPh: 'Nome dell\u2019azienda o del brand',
-      message: 'Raccontaci la tua visione',
-      messagePh: 'Descrivi la tua attivit\u00e0, i tuoi obiettivi e ci\u00f2 che vuoi raggiungere.',
+      aboutYourself: 'Raccontaci di te', aboutYourselfPh: 'La tua esperienza, il tuo percorso e cosa ti motiva.',
+      aboutBusiness: 'Raccontaci della tua attivit\u00e0 o prodotto', aboutBusinessPh: 'Descrivi la tua attivit\u00e0, i tuoi obiettivi e ci\u00f2 che vuoi raggiungere.',
       submit: 'Invia Richiesta'
     },
     footer: '&copy; 2026 Method Index, LLC. Tutti i diritti riservati.'
@@ -519,11 +531,14 @@ var TRANSLATIONS = {
       label: '\u062a\u0648\u0627\u0635\u0644',
       heading: '\u0627\u0628\u062f\u0623<br><em>\u0645\u0634\u0631\u0648\u0639\u0643.</em>',
       sub: '\u0646\u0639\u0645\u0644 \u0645\u0639 \u0639\u062f\u062f \u0645\u062d\u062f\u0648\u062f \u0645\u0646 \u0627\u0644\u0639\u0645\u0644\u0627\u0621 \u0643\u0644 \u0639\u0627\u0645. \u0625\u0630\u0627 \u0643\u0646\u062a \u0645\u0633\u062a\u0639\u062f\u0627\u064b \u0644\u0628\u0646\u0627\u0621 \u0634\u064a\u0621 \u0627\u0633\u062a\u062b\u0646\u0627\u0626\u064a\u060c \u0646\u0648\u062f\u0651 \u0623\u0646 \u0646\u0633\u0645\u0639 \u0645\u0646\u0643.',
-      name: '\u0627\u0644\u0627\u0633\u0645', namePh: '\u0627\u0633\u0645\u0643 \u0627\u0644\u0643\u0627\u0645\u0644',
+      formTitle: '\u0646\u0631\u064a\u062f \u0623\u0646 \u0646\u0643\u0648\u0646 \u062c\u0632\u0621\u0627\u064b \u0645\u0646 \u0646\u062c\u0627\u062d\u0643.',
+      firstName: '\u0627\u0644\u0627\u0633\u0645 \u0627\u0644\u0623\u0648\u0644', firstNamePh: '\u0627\u0633\u0645\u0643 \u0627\u0644\u0623\u0648\u0644',
+      lastName: '\u0627\u0644\u0644\u0642\u0628', lastNamePh: '\u0644\u0642\u0628\u0643',
       email: '\u0627\u0644\u0628\u0631\u064a\u062f \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a', emailPh: '\u0628\u0631\u064a\u062f\u0643@\u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a.com',
+      phone: '\u0631\u0642\u0645 \u0627\u0644\u0647\u0627\u062a\u0641', phonePh: '+1 000 000 0000',
       company: '\u0627\u0644\u0634\u0631\u0643\u0629', companyPh: '\u0627\u0633\u0645 \u0627\u0644\u0634\u0631\u0643\u0629 \u0623\u0648 \u0627\u0644\u0639\u0644\u0627\u0645\u0629 \u0627\u0644\u062a\u062c\u0627\u0631\u064a\u0629',
-      message: '\u0623\u062e\u0628\u0631\u0646\u0627 \u0639\u0646 \u0631\u0624\u064a\u062a\u0643',
-      messagePh: '\u0635\u0641 \u0639\u0645\u0644\u0643 \u0648\u0623\u0647\u062f\u0627\u0641\u0643 \u0648\u0645\u0627 \u062a\u0633\u0639\u0649 \u0625\u0644\u0649 \u062a\u062d\u0642\u064a\u0642\u0647.',
+      aboutYourself: '\u0623\u062e\u0628\u0631\u0646\u0627 \u0639\u0646\u0643', aboutYourselfPh: '\u062e\u0644\u0641\u064a\u062a\u0643 \u0648\u062e\u0628\u0631\u062a\u0643 \u0648\u0645\u0627 \u064a\u062d\u0641\u0632\u0643.',
+      aboutBusiness: '\u0623\u062e\u0628\u0631\u0646\u0627 \u0639\u0646 \u0639\u0645\u0644\u0643 \u0623\u0648 \u0645\u0646\u062a\u062c\u0643', aboutBusinessPh: '\u0635\u0641 \u0639\u0645\u0644\u0643 \u0648\u0623\u0647\u062f\u0627\u0641\u0643 \u0648\u0645\u0627 \u062a\u0633\u0639\u0649 \u0625\u0644\u0649 \u062a\u062d\u0642\u064a\u0642\u0647.',
       submit: '\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0627\u0633\u062a\u0641\u0633\u0627\u0631'
     },
     footer: '&copy; 2026 Method Index, LLC. \u062c\u0645\u064a\u0639 \u0627\u0644\u062d\u0642\u0648\u0642 \u0645\u062d\u0641\u0648\u0638\u0629.'
@@ -556,6 +571,11 @@ function applyTranslation(lang) {
     lnk.href = 'https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap';
     document.head.appendChild(lnk);
   }
+
+  // Section labels
+  setText('.showcase__section-label', t.nav.whatWeDo);
+  setText('.about__section-label', t.nav.ourStory);
+  setText('.contact__section-label', t.nav.connect);
 
   // Nav
   setText('.nav__links li:nth-child(1) a', t.nav.whatWeDo);
@@ -599,7 +619,6 @@ function applyTranslation(lang) {
   });
 
   // About
-  setText('.about-label .label-sm', t.about.label);
   setHTML('.about-heading', t.about.heading);
   var bodies = Array.isArray(t.about.body) ? t.about.body : [t.about.body];
   document.querySelectorAll('.about-body p').forEach(function (el, i) {
@@ -630,19 +649,25 @@ function applyTranslation(lang) {
   setHTML('.process-pricing p', t.process.pricing);
 
   // Contact
-  setText('.contact-header .label-sm', t.contact.label);
   setHTML('.contact-heading', t.contact.heading);
   setText('.contact-sub', t.contact.sub);
   var form = document.querySelector('.contact-form');
   if (form) {
-    var fl = form.querySelector('[for="name"]');     if (fl) fl.textContent = t.contact.name;
-    var fe = form.querySelector('[for="email"]');    if (fe) fe.textContent = t.contact.email;
-    var fc = form.querySelector('[for="company"]');  if (fc) fc.textContent = t.contact.company;
-    var fm = form.querySelector('[for="message"]');  if (fm) fm.textContent = t.contact.message;
-    setPH('#name',    t.contact.namePh);
-    setPH('#email',   t.contact.emailPh);
-    setPH('#company', t.contact.companyPh);
-    setPH('#message', t.contact.messagePh);
+    var ftitle = form.querySelector('.contact-form__title');   if (ftitle) ftitle.textContent = t.contact.formTitle;
+    var ffn = form.querySelector('[for="first-name"]');        if (ffn) ffn.textContent = t.contact.firstName;
+    var fln = form.querySelector('[for="last-name"]');         if (fln) fln.textContent = t.contact.lastName;
+    var fe  = form.querySelector('[for="email"]');             if (fe)  fe.textContent  = t.contact.email;
+    var fph = form.querySelector('[for="phone"]');             if (fph) fph.textContent = t.contact.phone;
+    var fc  = form.querySelector('[for="company"]');           if (fc)  fc.textContent  = t.contact.company;
+    var fay = form.querySelector('[for="about-yourself"]');    if (fay) fay.textContent = t.contact.aboutYourself;
+    var fab = form.querySelector('[for="about-business"]');    if (fab) fab.textContent = t.contact.aboutBusiness;
+    setPH('#first-name',     t.contact.firstNamePh);
+    setPH('#last-name',      t.contact.lastNamePh);
+    setPH('#email',          t.contact.emailPh);
+    setPH('#phone',          t.contact.phonePh);
+    setPH('#company',        t.contact.companyPh);
+    setPH('#about-yourself', t.contact.aboutYourselfPh);
+    setPH('#about-business', t.contact.aboutBusinessPh);
     var sb = form.querySelector('.btn-submit span'); if (sb) sb.textContent = t.contact.submit;
   }
 

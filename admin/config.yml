@@ -2,7 +2,7 @@ backend:
   name: github
   repo: RyvoDigital/method-index
   branch: main
-  base_url: https://REPLACE_WITH_YOUR_VERCEL_URL
+  base_url: https://www.methodindex.com
   auth_endpoint: api/auth
 
 media_folder: assets
